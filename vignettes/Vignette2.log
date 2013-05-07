@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 MAY 2013 11:22
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 MAY 2013 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -40,19 +40,34 @@ Package: inputenc 2008/03/30 v1.1d Input encoding file
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2008/03/30 v1.1d Input encoding file
-)) (./Sweave.sty
-Package: Sweave 
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@indent=\dimen106
+\caption@parindent=\dimen107
+\caption@hangindent=\dimen108
+)
+\c@ContinuedFloat=\count87
+)
+(./Sweave.sty
+Package: Sweave 
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -73,21 +88,21 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count87
+\Gread@gobject=\count88
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen109
+\Gin@req@width=\dimen110
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count88
+\FV@CodeLineNo=\count89
 \FV@InFile=\read1
 \FV@TabBox=\box26
-\c@FancyVerbLine=\count89
-\FV@StepNumber=\count90
+\c@FancyVerbLine=\count90
+\FV@StepNumber=\count91
 \FV@OutFile=\write3
 )
 (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/upquote.sty
@@ -185,37 +200,39 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))) (./Vignette2.aux)
 \openout1 = `Vignette2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 35.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen105
+\scratchcounter=\count92
+\scratchdimen=\dimen111
 \scratchbox=\box27
-\nofMPsegments=\count92
-\nofMParguments=\count93
+\nofMPsegments=\count93
+\nofMParguments=\count94
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen106
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen112
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
@@ -266,102 +283,101 @@ e
 ))
 (./Vignette2-concordance.tex)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 39.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 43.
 
-Overfull \hbox (43.05302pt too wide) in paragraph at lines 14--14
- [][] 
- []
-
-LaTeX Font Info:    Try loading font information for T1+aett on input line 18.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 20.
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 45.
 
 
 (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/ts1aett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 20.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 45.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <10> not available
-(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 20.
+(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 53.
+(Font)              <7> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 53.
+(Font)              <5> on input line 68.
  [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Vignette2-006.pdf, id=15, 433.62pt x 433.62pt>
-File: Vignette2-006.pdf Graphic file (type pdf)
- <use Vignette2-006.pdf>
-Package pdftex.def Info: Vignette2-006.pdf used on input line 91.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+<Vignette2-Fig1.pdf, id=15, 289.08pt x 144.54pt>
+File: Vignette2-Fig1.pdf Graphic file (type pdf)
+ <use Vignette2-Fig1.pdf>
+Package pdftex.def Info: Vignette2-Fig1.pdf used on input line 108.
+(pdftex.def)             Requested size: 258.75pt x 129.38123pt.
 
-[2] <Vignette2-007.pdf, id=19, 433.62pt x 433.62pt>
-File: Vignette2-007.pdf Graphic file (type pdf)
- <use Vignette2-007.pdf>
-Package pdftex.def Info: Vignette2-007.pdf used on input line 108.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+[2 <./Vignette2-Fig1.pdf>] <Vignette2-Fig2.pdf, id=25, 289.08pt x 289.08pt>
+File: Vignette2-Fig2.pdf Graphic file (type pdf)
 
-[3 <./Vignette2-006.pdf>] <Vignette2-008.pdf, id=29, 433.62pt x 433.62pt>
-File: Vignette2-008.pdf Graphic file (type pdf)
+<use Vignette2-Fig2.pdf>
+Package pdftex.def Info: Vignette2-Fig2.pdf used on input line 131.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+ [3 <./Vignette2-Fig2.pdf>]
+<Vignette2-Fig3.pdf, id=37, 289.08pt x 289.08pt>
+File: Vignette2-Fig3.pdf Graphic file (type pdf)
+ <use Vignette2-Fig3.pdf>
+Package pdftex.def Info: Vignette2-Fig3.pdf used on input line 167.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
 
-<use Vignette2-008.pdf>
-Package pdftex.def Info: Vignette2-008.pdf used on input line 127.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- [4 <./Vignette2-007.pdf>] [5 <./Vignette2-008.pdf>]
-<Vignette2-009.pdf, id=47, 433.62pt x 433.62pt>
-File: Vignette2-009.pdf Graphic file (type pdf)
- <use Vignette2-009.pdf>
-Package pdftex.def Info: Vignette2-009.pdf used on input line 158.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+[4 <./Vignette2-Fig3.pdf>] <Vignette2-Fig4.pdf, id=47, 289.08pt x 289.08pt>
+File: Vignette2-Fig4.pdf Graphic file (type pdf)
 
-[6 <./Vignette2-009.pdf>] <Vignette2-010.pdf, id=57, 433.62pt x 433.62pt>
-File: Vignette2-010.pdf Graphic file (type pdf)
+<use Vignette2-Fig4.pdf>
+Package pdftex.def Info: Vignette2-Fig4.pdf used on input line 203.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+ [5 <./Vignette2-Fig4.pdf>]
+<Vignette2-Fig5.pdf, id=57, 289.08pt x 289.08pt>
+File: Vignette2-Fig5.pdf Graphic file (type pdf)
+ <use Vignette2-Fig5.pdf>
+Package pdftex.def Info: Vignette2-Fig5.pdf used on input line 234.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
 
-<use Vignette2-010.pdf>
-Package pdftex.def Info: Vignette2-010.pdf used on input line 184.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- [7 <./Vignette2-010.pdf>]
-<Vignette2-011.pdf, id=68, 433.62pt x 433.62pt>
-File: Vignette2-011.pdf Graphic file (type pdf)
- <use Vignette2-011.pdf>
-Package pdftex.def Info: Vignette2-011.pdf used on input line 209.
-(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+[6 <./Vignette2-Fig5.pdf>] <Vignette2-Fig6.pdf, id=67, 289.08pt x 289.08pt>
+File: Vignette2-Fig6.pdf Graphic file (type pdf)
 
-[8 <./Vignette2-011.pdf>] (./Vignette2.aux) ) 
+<use Vignette2-Fig6.pdf>
+Package pdftex.def Info: Vignette2-Fig6.pdf used on input line 265.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+ [7 <./Vignette2-Fig6.pdf>] (./Vignette2.aux) ) 
 Here is how much of TeX's memory you used:
- 2745 strings out of 493633
- 40611 string characters out of 3143378
- 87140 words of memory out of 3000000
- 5964 multiletter control sequences out of 15000+200000
+ 3706 strings out of 493633
+ 57657 string characters out of 3143378
+ 101875 words of memory out of 3000000
+ 6919 multiletter control sequences out of 15000+200000
  24231 words of font info for 56 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,6n,23p,372b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2011/texmf-dis
-t/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2011/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/f
+ 37i,6n,38p,410b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-d
+ist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/cm-super/sfst1000.pfb>
-Output written on Vignette2.pdf (8 pages, 134476 bytes).
+ype1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
+public/cm-super/sfst1000.pfb>
+Output written on Vignette2.pdf (7 pages, 168698 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
