@@ -1,0 +1,10 @@
+Package: ASOmodels
+Type: Package
+Title: Kinetic models for AntiSense Oligonucleotides
+Version: 1.0
+Date: 2013-03-21
+Author: Lykke Pedersen, Peter Hagedorn and Morten Lindow
+Maintainer: Lykke Pedersen <lykkep@gmail.com>
+Description: This package supports the paper by Pedersen & Hagedorn et al. It contains all the code and data needed to recreate the findings of the paper.
+License: Creative Commons
+Depends: drc, deSolve, sfsmisc, TeachingDemos, nleqslv, rootSolve
