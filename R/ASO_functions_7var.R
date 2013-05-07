@@ -62,7 +62,7 @@ Trel <- function(otot,param=parms){  #
 IC50 <- function(KdOT,param=parms){
   param['KdOT'] <- KdOT
   Otseq <- 10^seq(-3,3,length=50)
-  Trelseq <- Trel.function(Otseq,param=param)
+  Trelseq <- Trel(Otseq,param=param)
   parms  <- coefficients(drm(Trelseq~Otseq,fct=LL.5()))
   #b <- parms[1]; c <- parms[2]; d <- parms[3]; e <- parms[4]; f <- parms[5]
   out <- exp((parms[1]*log(parms[4])+log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])-1))/parms[1]) 
@@ -82,7 +82,7 @@ IC50stoc <- function(Trel,Ot){ # TODO: more descriptive function name?
 IC50NO <- function(KdOT,param=parmsNO){
   param['KdOT'] <- KdOT
   Otseq <- 10^seq(-3,3,length=50)
-  Trelseq <- Trel.functionNO(Otseq,param=param)
+  Trelseq <- TrelNO(Otseq,param=param)
   parms  <- coefficients(drm(Trelseq~Otseq,fct=LL.5()))
   #b <- parms[1]; c <- parms[2]; d <- parms[3]; e <- parms[4]; f <- parms[5]
   out <- exp((parms[1]*log(parms[4])+log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])-1))/parms[1]) 
@@ -128,14 +128,14 @@ diffASO <- function(t,y, param){
 #TODO: document
 plot.doseresponse <- function(par,list.par,title,unit,plot=T){
   if(plot){
-  curve(Trel.function,1E-2,1E4,log='x', 
+  curve(Trel,1E-2,1E4,log='x', 
         xlab=expression(Total~oligo~concentration~'(nM)'),
         ylab=expression(T[rel]), 
         las=1,ylim=c(0,1),xaxt='n',mgp=c(2.2,0.7,0))
   axis(1,at=10^c(-2,0,2,4),labels=pretty10expLP(10^c(-2,0,2,4),drop.1=T))
   for(i in 1:length(list.par)){
     parmsM <- parms ; parmsM[par] <- list.par[i]
-    runM <- function(x)Trel.function(x,param=parmsM)
+    runM <- function(x)Trel(x,param=parmsM)
     curve(runM,1E-2,1E4,col=rainbow(length(list.par))[i],add=TRUE)
   }
   Legend=as.expression(sapply(c(parms[par],list.par),
