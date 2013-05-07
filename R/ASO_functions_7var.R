@@ -16,7 +16,7 @@ last <- function(x) { tail(x, n = 1) }
 #' 
 #' @return returns the relative total target concentration
 #' @example #TODO Please give working example code that does something useful
-Trel.function <- function(otot,param=parms){  #
+Trel <- function(otot,param=parms){  #
   
   #### Parameters
   k1 =param['kOpT']; D1 = param['KdOT']; k2 = param['kOTpE']; Et <- param['Et']
@@ -126,7 +126,7 @@ diffASO <- function(t,y, param){
 #### Plot dose-respons for various parameters
 ###############################################################################
 #TODO: document
-change.par <- function(par,list.par,title,unit,plot=T){
+plot.doseresponse <- function(par,list.par,title,unit,plot=T){
   if(plot){
   curve(Trel.function,1E-2,1E4,log='x', 
         xlab=expression(Total~oligo~concentration~'(nM)'),
@@ -172,7 +172,7 @@ pretty10expLP <-  function (x, drop.1 = FALSE, digits.fuzz = 7)
 #### Calculation of Trel for no coupling of off-rates
 ###############################################################################
 
-Trel.functionNO <- function(otot,param=parmsNO){
+TrelNO <- function(otot,param=parmsNO){
   
   #### Parameters
   k1 =param['kOpT']; D1 = param['KdOT']; k2 = param['kOTpE']; Et <- param['Et']
