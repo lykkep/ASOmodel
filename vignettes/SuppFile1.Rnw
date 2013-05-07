@@ -50,7 +50,7 @@ This document is the supplementary file for the manuscript entitled ``A kinetic 
 The functions and data used to produce the figures in the main manuscript and this supplementary file are available after installing and requiring the ASOmodel package in R
 <<>>=
 require(devtools)
-#install_github('ASOmodel',username='lykkep')
+install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
 The ASOmodels package contains the following functions:
