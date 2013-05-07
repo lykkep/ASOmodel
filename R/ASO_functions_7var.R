@@ -211,3 +211,16 @@ TrelNO <- function(otot,param=parmsNO){
   sapply(otot,tmp)
 }
 
+###############################################################################
+#### Calculation of Trel for stochastic simulation of the ASOmodel
+###############################################################################
+
+Trelstoc <- function(Ot,km1=0.06){
+  parms1['km1'] <- km1; parms1['k3'] <- km1/0.6
+  x0['O'] <- Ot
+  Gillespie <- ssa(x0=x0,a=a,nu=nu,parms = parms1,tf=2E2,method = "ETL")
+  data <- rowSums(Gillespie$data[,2:4])/x0['Tt']
+  Tmean <- mean(data[200:nrow(Gillespie$data)])
+  Tsd <- sd(data[200:nrow(Gillespie$data)])
+  return(list(Trel=Gillespie$data,Tstat=c('O'=x0['O'],TrelM=Tmean,TrelSD=Tsd)))
+}
