@@ -177,7 +177,7 @@ TrelNO <- function(otot,param=parmsNO){
   #### Parameters
   k1 =param['kOpT']; D1 = param['KdOT']; k2 = param['kOTpE']; Et <- param['Et']
   D2 = param['KdOTE']; vt = param['vprod']; k4 = param['vdegrad']
-  alpha=param['alpha']; kE=param['kcleav']; k3=param['k3']
+  alpha=param['alpha']; kE=param['kcleav']; k3=param['kC']
   
   
   tmp <- function(Ot){
