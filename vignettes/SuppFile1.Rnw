@@ -255,39 +255,39 @@ The stochastic simulation of the ASOmodel is carried out by use of the \texttt{s
 <<echo=T>>=
 library(GillespieSSA)
 #Model parameters
-parms1 <- c(k1 = 2E-5,k2 =50E-5 ,vt = 150,  kd = 0.04,		  
-              kE = 2, km1 =0.06, km2=2, k3 = 0.1)
+parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  vdegrad = 0.04,		  
+              kcleav = 2, kOT =0.06, kOTE=2, kC = 0.1)
 #Initital state vector
-x0 <- c(Tt=parms1["vt"]/parms1["kd"],
+x0 <- c(Tt=parms1["vprod"]/parms1["vdegrad"],
         OT=0,OTE=0,E=1e3,O=1e5,OCE=0,OC=0)
 names(x0) <- c('Tt','OT','OTE','E','O','OCE','OC')
 #Propensity vector
-a <-  c("vt","k1*O*Tt","kd*Tt","km1*OT","km2*OTE","kd*OT",
-        "k2*OT*E","kd*OTE","kE*OTE","k3*OC","km2*OCE" )
+a <-  c("vprod","kOpT*O*Tt","vdegrad*Tt","kOT*OT","kOTE*OTE","vdegrad*OT",
+        "kOTpE*OT*E","vdegrad*OTE","kcleav*OTE","kC*OC","kOTE*OCE" )
 #State-change matrix
 nu <- matrix(0,7,length(a))
 dimnames(nu) <- list(names(x0),a)
 #T
-nu['Tt',c('vt','km1*OT')] <- 1
-nu['Tt',c('k1*O*Tt','kd*Tt')] <- -1 
+nu['Tt',c('vt','kOT*OT')] <- 1
+nu['Tt',c('kOpT*O*Tt','vdegrad*Tt')] <- -1 
 #OT
-nu['OT',c('k1*O*Tt','km2*OTE')] <- 1
-nu['OT',c('km1*OT','k2*OT*E','kd*OT')] <- -1
+nu['OT',c('kOpT*O*Tt','kOTE*OTE')] <- 1
+nu['OT',c('kOT*OT','kOTE*OT*E','vdegrad*OT')] <- -1
 #OTE
-nu['OTE',c('k2*OT*E')] <- 1
-nu['OTE',c('km2*OTE','kd*OTE','kE*OTE')] <- -1
+nu['OTE',c('kOTpE*OT*E')] <- 1
+nu['OTE',c('kOTE*OTE','vdegrad*OTE','kcleav*OTE')] <- -1
 #E
-nu['E',c('km2*OTE','kd*OTE','km2*OCE')] <- 1
-nu['E',c('k2*OT*E')] <- -1
+nu['E',c('kOTE*OTE','vdedrag*OTE','kOTE*OCE')] <- 1
+nu['E',c('kOTpE*OT*E')] <- -1
 #O
-nu['O',c('km1*OT','kd*OTE','kd*OTE','kd*OT','k3*OC')] <- 1
-nu['O',c('k1*O*Tt')] <- -1
+nu['O',c('kOT*OT','vdegrad*OTE','vdegrad*OT','kC*OC')] <- 1
+nu['O',c('kOpT*O*Tt')] <- -1
 #OCE
-nu['OCE',c('kE*OTE')] <- 1
-nu['OCE',c('km2*OCE')] <- -1
+nu['OCE',c('kcleav*OTE')] <- 1
+nu['OCE',c('kOTE*OCE')] <- -1
 #OC
-nu['OC',c('km2*OCE')] <- 1
-nu['OC',c('k3*OC')] <- -1
+nu['OC',c('kOTE*OCE')] <- 1
+nu['OC',c('kC*OC')] <- -1
 
 Gillespie <- ssa( x0=x0,a=a,nu=nu,
       parms = parms1,tf=1E3,method = "ETL")
@@ -303,7 +303,7 @@ Gillespie <- ssa( x0=x0,a=a,nu=nu,
 % @
 <<Trel,echo=F,fig=TRUE,width=4,height=4,include=FALSE>>=
 # plot of the time-trase for Trel
-plot(Gillespie$data[,1],rowSums(Gillespie$data[,2:4])/(parms1["vt"]/parms1["kd"]),
+plot(Gillespie$data[,1],rowSums(Gillespie$data[,2:4])/(parms1["vprod"]/parms1["vdedrag"]),
 		xlab='time (min)',ylab='Relative total target level',type='l')
 @
 Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a function of time.
@@ -319,11 +319,11 @@ After a while the stochastic simulation reaches a plateau. In Supplementary Figu
 <<echo=T>>=
 lseq <- c(1,2.5,5,7.5)
 #### Sequence of k(OT -> O+T) values
-KM <- c(1E-3*lseq[-1],1E-2*lseq,1E-1*lseq)
+lKOT <- c(1E-3*lseq[-1],1E-2*lseq,1E-1*lseq)
 #### Generation of dose-response curves
-DRcurve <- lapply(KM,function(kmi){ 
+DRcurve <- lapply(lKOT,function(ki){ 
             sapply(10^seq(2.5,6,by=0.2),
-                   function(i) Trelstoc(i,kOT=kmi)$Tstat)})
+                   function(i) Trelstoc(i,kOT=ki)$Tstat)})
 DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
 #### Calculation of IC50
 IC50_KM <- sapply(1:length(DRc),

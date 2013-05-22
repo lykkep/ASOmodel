@@ -216,7 +216,7 @@ TrelNO <- function(Ot,param=parmsNO){
 ###############################################################################
 
 Trelstoc <- function(Ot,kOT=0.06){
-  parms1['km1'] <- kOT; parms1['k3'] <- kOT/0.6
+  parms1['kOT'] <- kOT; parms1['kC'] <- kOT/0.6
   x0['O'] <- Ot
   Gillespie <- ssa(x0=x0,a=a,nu=nu,parms = parms1,tf=2E2,method = "ETL")
   data <- rowSums(Gillespie$data[,2:4])/x0['Tt']
