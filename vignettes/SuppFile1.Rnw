@@ -251,7 +251,7 @@ For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated
 
 
 \section{Supplementary Figure S3}
-The stochastic simulation of the ASOmodel is carried out by use of the \texttt{ssa()} function from the GillespieSSA package (v.0.5-4). The inputs to ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
+The stochastic simulation of the ASOmodel is carried out by use of the \texttt{ssa()} R-function from the GillespieSSA package (v.0.5-4). The inputs to ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
 <<echo=T>>=
 library(GillespieSSA)
 #Model parameters
@@ -268,16 +268,16 @@ a <-  c("vprod","kOpT*O*Tt","vdegrad*Tt","kOT*OT","kOTE*OTE","vdegrad*OT",
 nu <- matrix(0,7,length(a))
 dimnames(nu) <- list(names(x0),a)
 #T
-nu['Tt',c('vt','kOT*OT')] <- 1
+nu['Tt',c('vprod','kOT*OT')] <- 1
 nu['Tt',c('kOpT*O*Tt','vdegrad*Tt')] <- -1 
 #OT
 nu['OT',c('kOpT*O*Tt','kOTE*OTE')] <- 1
-nu['OT',c('kOT*OT','kOTE*OT*E','vdegrad*OT')] <- -1
+nu['OT',c('kOT*OT','kOTpE*OT*E','vdegrad*OT')] <- -1
 #OTE
 nu['OTE',c('kOTpE*OT*E')] <- 1
 nu['OTE',c('kOTE*OTE','vdegrad*OTE','kcleav*OTE')] <- -1
 #E
-nu['E',c('kOTE*OTE','vdedrag*OTE','kOTE*OCE')] <- 1
+nu['E',c('kOTE*OTE','vdegrad*OTE','kOTE*OCE')] <- 1
 nu['E',c('kOTpE*OT*E')] <- -1
 #O
 nu['O',c('kOT*OT','vdegrad*OTE','vdegrad*OT','kC*OC')] <- 1
@@ -303,7 +303,7 @@ Gillespie <- ssa( x0=x0,a=a,nu=nu,
 % @
 <<Trel,echo=F,fig=TRUE,width=4,height=4,include=FALSE>>=
 # plot of the time-trase for Trel
-plot(Gillespie$data[,1],rowSums(Gillespie$data[,2:4])/(parms1["vprod"]/parms1["vdedrag"]),
+plot(Gillespie$data[,1],rowSums(Gillespie$data[,2:4])/(parms1["vprod"]/parms1["vdegrad"]),
 		xlab='time (min)',ylab='Relative total target level',type='l')
 @
 Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a function of time.
@@ -317,8 +317,8 @@ Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a funct
 \section{Supplementary Figure S4}
 After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right):
 <<echo=T>>=
-lseq <- c(1,2.5,5,7.5)
 #### Sequence of k(OT -> O+T) values
+lseq <- c(1,2.5,5,7.5)
 lKOT <- c(1E-3*lseq[-1],1E-2*lseq,1E-1*lseq)
 #### Generation of dose-response curves
 DRcurve <- lapply(lKOT,function(ki){ 
@@ -326,7 +326,7 @@ DRcurve <- lapply(lKOT,function(ki){
                    function(i) Trelstoc(i,kOT=ki)$Tstat)})
 DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
 #### Calculation of IC50
-IC50_KM <- sapply(1:length(DRc),
+IC50_lKOT <- sapply(1:length(DRc),
               function(x){IC50stoc(DRc[[x]][2,],DRc[[x]][1,])})
 @
 <<IC50,echo=F,fig=TRUE,width=7,height=4,include=FALSE>>=
@@ -335,7 +335,7 @@ N <- length(DRc)
 plot(DRc[[1]][1,],DRc[[1]][2,],ylab='Relative target level',ylim=c(0,1),
 		xlab='Total oligonucleotide (molecules)',log='x',type='l',
 		col=rainbow(N)[1],xlim=c(2E3,max(unlist(DRc))),lwd=2)
-LegendS=as.expression(sapply(signif(KM[seq(1,11,by=2)],2),
+LegendS=as.expression(sapply(signif(lKOT[seq(1,11,by=2)],2),
                 function(x) substitute(y==x,list(x=x,y=~k[OT %->% O+T]))))
 legend('bottomleft',LegendS,#signif(KM[seq(1,11,by=2)],2)),
 		col=rainbow(N)[seq(1,11,by=2)],lwd=2,bty='n',cex=0.6)
@@ -343,14 +343,14 @@ for(i in seq(3,11,by=2)){
 	points(DRc[[i]][1,],DRc[[i]][2,],col=rainbow(N)[i],type='l',lwd=2)
 }
 
-plot(KM,IC50_KM,log='x',ylab=expression(IC[50]~'(molecules)'),
+plot(lKOT,IC50_lKOT,log='x',ylab=expression(IC[50]~'(molecules)'),
 		xlab=expression(k['OT'%->%'O+T']~'(1/min)'))
 @
 \begin{figure}[!h]
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFile1-IC50.pdf}
 \end{Ncenter}
-\caption{Left: Dose-response curves for various values of $\kmo$. Right: The $IC_{50}$-value as a function of $\kmo$.}\label{fig:figIC50}
+\caption{Left: Dose-response curves for various values of $\kmo$. Right: $IC_{50}$ as a function of $\kmo$.}\label{fig:figIC50}
 \end{figure}
 \newpage
 

@@ -27,7 +27,7 @@
 \usepackage[labelsep=none]{caption}
 \renewcommand{\thefigure}{}
 
-\title{Figure code for Pedersen et al. (2013), Nature Biotechnology}
+\title{R-code for producing Figure 2 from Pedersen et al. (2013), Nature Biotechnology}
 \author{Lykke Pedersen, \and Peter H Hagedorn, \and Marie Lindholm, \and Morten Lindow}
 \date{}
 
@@ -37,7 +37,7 @@
 
 
 \maketitle
-With the gain of increasing reproducibility, this vignette includes the commands to reproduce Fig. 2 from ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and thus explains why shorter and less affine oligonucleotides may be more potent". The functions from the ASOmodels are used and the package is loaded by the commands
+With the gain of increasing reproducibility, this vignette includes the commands to reproduce Fig. 2 from ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and thus explains why shorter and less affine oligonucleotides may be more potent". The R-functions from the ASOmodels are used and the package is loaded by the commands
 
 \begin{Schunk}
 \begin{Sinput}
@@ -49,7 +49,7 @@ With the gain of increasing reproducibility, this vignette includes the commands
 
 \section*{Kinetic model figures}
 \subsection*{Figure 2a: Time-resolved simulation of the ASO model}
-Parameters for the ASO model, the initial concentrations and the time-steps for which the simulation is performed
+Parameters for the ASO model, the initial concentrations and the time-steps for which the simulation is performed:
 \begin{Schunk}
 \begin{Sinput}
 > parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,  
@@ -73,12 +73,13 @@ The timetraces for the concentrations of $[O]$, $[T]$, $[OT]$, $[OTE]$, and $[E]
 +                 function(x) (x-min(x))/max(x-min(x)) )
 > colVAR <- c('black','darkgreen','darkred','orange','green')
 > xtime <- TimeSteps <= 35
-> par(mar=c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),cex=0.6,cex.axis=1,las=1)
+> par(mar=c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
++     cex=0.6,cex.axis=1,las=1)
 > for(i in 1:5){ 
 +   if(i!=1) par(new=TRUE)
 +   plot(TimeSteps[xtime], solASO[xtime,i], yaxt='n', xaxt='n',
-+        ylab='relative concentrations', xlab='minutes',
-+        las=1, col=colVAR[i], type='l', ylim=c(0,1), xlim=c(0,35+26))
++        ylab='relative concentrations', xlab='minutes',las=1, 
++        col=colVAR[i], type='l', ylim=c(0,1), xlim=c(0,35+26))
 + }
 > xtime <- 40
 > for(i in 1:5) lines(xtime+0:20,rep(last(solASO)[i],21),
@@ -111,14 +112,14 @@ The timetraces for the concentrations of $[O]$, $[T]$, $[OT]$, $[OTE]$, and $[E]
 \end{figure}
 
 \subsection*{Figure 2b: Simulated dose-response curve}
-Given a set of parameters the function \texttt{Trel()} from the ASOmodels package calculates the relative target concentration as a function of the total concentration of oligonucleotide added to the system.
+Given a set of parameters the R-function \texttt{Trel()} from the ASOmodels package calculates the relative target concentration as a function of the total concentration of oligonucleotide added to the system.
 \begin{Schunk}
 \begin{Sinput}
 > curve(Trel,1E-3,5E2,log='x', lwd=2,ylim=c(0,1),
 +       ylab=expression(T[rel]),xaxt='n',
 +       xlab='Total oligonucleotide conc (nM)')
-> abline(h=Trel(1E9),lty=2)
-> abline(v=IC50(parms['KdOT']),lty=2)
+> abline(h=Trel(1E9),lty=2) #Trel,min
+> abline(v=IC50(parms['KdOT']),lty=2) #IC50
 > axis(1,at=10^c(-3,-1,1,3),
 +      labels=pretty10expLP(10^c(-3,-1,1,3),drop.1=T))
 > axis(1,at=IC50(parms['KdOT']),label=expression(IC[50]))
@@ -130,27 +131,27 @@ Given a set of parameters the function \texttt{Trel()} from the ASOmodels packag
 \begin{Ncenter}
 \includegraphics[width=0.5\textwidth]{Vignette2-Fig2}
 \end{Ncenter}
-\caption{2b: The relative total target concentration ($\Trel$) is defined as the steady state level of total target in the presence of oligonucleotide divided by the target concentration in the absence of oligonucleotide. Dashed lines indicate efficacy (horizontal) and $IC_{50}$ (vertical)}
+\caption{2b: The relative total target concentration ($\Trel$) is defined as the steady state level of total target in the presence of oligonucleotide divided by the target concentration in the absence of oligonucleotide. Dashed lines indicate efficacy (horizontal) and $IC_{50}$ (vertical).}
 \end{figure}
 
 
 \subsection*{Figure 2c: An optimum affinity}
-For a sequence of affinities \texttt{D1\_seq} the $IC_{50}$ values are calculated by use of the function \texttt{IC50} from the ASOmodels package:
+For a sequence of affinities \texttt{D1\_seq} the $IC_{50}$ values are calculated by use of the R-function \texttt{IC50} from the ASOmodels package:
 \begin{Schunk}
 \begin{Sinput}
 > D1_seq <- 10^seq(-3,3.2,by=0.25)
 > ICfit <- sapply(D1_seq,IC50)
 \end{Sinput}
 \end{Schunk}
-When there is no coupling between the off-rates $\kmo$ and $\kD$ then the value of $\kD$ is set in the param vector as the entry \texttt{'kC'}
+When there is no coupling between the off-rates $\kmo$ and $\kD$ then the value of $\kD$ is set in the param vector as the entry \texttt{'kC'}:
 \begin{Schunk}
 \begin{Sinput}
 > parmsNO <- c(parms,kC=parms['kOpT']*parms['KdOT']/parms['alpha'])
 > names(parmsNO)[length(parmsNO)] <- 'kC'
-> ICfitNO <- sapply(D1_seq,IC50NO)
+> ICfitNO <- sapply(D1_seq,IC50NO) #IC50 without coupling
 \end{Sinput}
 \end{Schunk}
-For the sequence of affinities the two different sequences of $IC_{50}$ values are plotted
+For the sequence of affinities the sequences of $IC_{50}$ values are plotted:
 \begin{Schunk}
 \begin{Sinput}
 > plot(D1_seq,ICfit,log='xy',yaxt='n',type='l',xaxt='n',
