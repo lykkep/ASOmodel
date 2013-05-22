@@ -246,24 +246,25 @@ For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFile1-S2.pdf}
 \end{Ncenter}
-\caption{The optimum affinity is dependent on the parameter settings. In the panels the $IC_{50}$ concentration is plotted against the binding affinity quantified by $K_{dOT}$ for various parameters. From top-left to bottom-right we have varied the total RNAse H concentration ($E_t$), alpha, the rate of target cleavage ($k_{OTE \to OCE}$), the target production ($v_{prod}$) and degradation ($v_{degrad}$), and the dissociation constant for the OTE complex ($D_{OTE}$).}\label{fig::Opt}
+\caption{The optimum affinity is dependent on the parameter settings. In the panels the $IC_{50}$ concentration is plotted against the binding affinity quantified by $K_{dOT}$ for various parameters. We have varied the total RNAse H concentration ($E_t$), alpha, the rate of target cleavage ($k_{OTE \to OCE}$), the target production ($v_{prod}$) and degradation ($v_{degrad}$), and the dissociation constant for the OTE complex ($D_{OTE}$).}\label{fig::Opt}
 \end{figure}
 
 
 \section{Supplementary Figure S3}
-The stochastic simulation of the ASOmodel is carried out by use of the \texttt{ssa()} function from the GillespieSSA package (v.0.5-4). The inputs of ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
+The stochastic simulation of the ASOmodel is carried out by use of the \texttt{ssa()} function from the GillespieSSA package (v.0.5-4). The inputs to ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
 <<echo=T>>=
 library(GillespieSSA)
+#Model parameters
 parms1 <- c(k1 = 2E-5,k2 =50E-5 ,vt = 150,  kd = 0.04,		  
               kE = 2, km1 =0.06, km2=2, k3 = 0.1)
-
+#Initital state vector
 x0 <- c(Tt=parms1["vt"]/parms1["kd"],
         OT=0,OTE=0,E=1e3,O=1e5,OCE=0,OC=0)
 names(x0) <- c('Tt','OT','OTE','E','O','OCE','OC')
-
+#Propensity vector
 a <-  c("vt","k1*O*Tt","kd*Tt","km1*OT","km2*OTE","kd*OT",
         "k2*OT*E","kd*OTE","kE*OTE","k3*OC","km2*OCE" )
-
+#State-change matrix
 nu <- matrix(0,7,length(a))
 dimnames(nu) <- list(names(x0),a)
 #T
@@ -288,23 +289,18 @@ nu['OCE',c('km2*OCE')] <- -1
 nu['OC',c('km2*OCE')] <- 1
 nu['OC',c('k3*OC')] <- -1
 
-Gillespie <- ssa( x0=x0,# initial state vector
-      a=a, # propensity vector
-      nu=nu, # state-change matrix
-      parms = parms1, # model parameters
-      tf=1E3, # final time
-      method = "ETL" # SSA method
-)
+Gillespie <- ssa( x0=x0,a=a,nu=nu,
+      parms = parms1,tf=1E3,method = "ETL")
 @
-Check that $[O]+[OT]+[OTE]+[OCE]+[OC] = O_t$ at all times:
-<<echo=T>>=
-range(rowSums(Gillespie$data[,c('O','OT','OTE','OCE','OC')])-
-        x0['O'])
-@
-Check that $[E]+[OTE]+[OCE] = E_t$ at all times:
-<<echo=T>>=
-range(rowSums(Gillespie$data[,c('OTE','OCE','E')])-x0['E'])
-@
+% Check that $[O]+[OT]+[OTE]+[OCE]+[OC] = O_t$ at all times:
+% <<echo=T>>=
+% range(rowSums(Gillespie$data[,c('O','OT','OTE','OCE','OC')])-
+%         x0['O'])
+% @
+% Check that $[E]+[OTE]+[OCE] = E_t$ at all times:
+% <<echo=T>>=
+% range(rowSums(Gillespie$data[,c('OTE','OCE','E')])-x0['E'])
+% @
 <<Trel,echo=F,fig=TRUE,width=4,height=4,include=FALSE>>=
 # plot of the time-trase for Trel
 plot(Gillespie$data[,1],rowSums(Gillespie$data[,2:4])/(parms1["vt"]/parms1["kd"]),
@@ -315,11 +311,11 @@ Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a funct
 \begin{Ncenter}
 \includegraphics[width=0.6\textwidth]{SuppFile1-Trel.pdf}
 \end{Ncenter}
-\caption{The time-trace for the relative total target level.}\label{fig:Trel}
+\caption{The time-trace for the relative total target level when the ASO model is simulated stochastically.}\label{fig:Trel}
 \end{figure}
 
 \section{Supplementary Figure S4}
-After a while the relative target concentration reaches a plateau. In Supplementary Figure S3 the plateu starts around $50min$. The mean of $\Trel$ within the plateu is calculated through the function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these the $IC_{50}$ values can be calculated using the \texttt{IC50stoc()} function and subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right).
+After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right).
 <<echo=T>>=
 lseq <- c(1,2.5,5,7.5)
 #### Sequence of k(OT -> O+T) values
@@ -327,7 +323,7 @@ KM <- c(1E-3*lseq[-1],1E-2*lseq,1E-1*lseq)
 #### Generation of dose-response curves
 DRcurve <- lapply(KM,function(kmi){ 
             sapply(10^seq(2.5,6,by=0.2),
-                   function(i) Trelstoc(i,km1=kmi)$Tstat)})
+                   function(i) Trelstoc(i,kOT=kmi)$Tstat)})
 DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
 #### Calculation of IC50
 IC50_KM <- sapply(1:length(DRc),
