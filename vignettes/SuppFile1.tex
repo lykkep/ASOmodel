@@ -306,3 +306,39 @@ After a while the stochastic simulation reaches a plateau. In Supplementary Figu
 > DRcurve <- lapply(lKOT,function(ki){ 
 +             sapply(10^seq(2.5,6,by=0.2),
 +                    function(i) Trelstoc(i,kOT=ki)$Tstat)})
+> DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
+> #### Calculation of IC50
+> IC50_lKOT <- sapply(1:length(DRc),
++               function(x){IC50stoc(DRc[[x]][2,],DRc[[x]][1,])})
+\end{Sinput}
+\end{Schunk}
+\begin{figure}[!h]
+\begin{Ncenter}
+\includegraphics[width=\textwidth]{SuppFile1-IC50.pdf}
+\end{Ncenter}
+\caption{Left: Dose-response curves for various values of $\kmo$. Right: $IC_{50}$ as a function of $\kmo$.}\label{fig:figIC50}
+\end{figure}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supplementary Figure S5}
+\begin{figure}[!h]
+\begin{Ncenter}
+\includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+\end{Ncenter}
+\caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+\end{figure}
+
+\section{Supplementary Figure S6}
+\begin{figure}[!h]
+\begin{Ncenter}
+\includegraphics[width=\textwidth]{SuppFigS3.pdf}
+\end{Ncenter}
+\caption{Measured melting temperature vs predicted melting temperatur. There are clear correlations (r > 0.92, P < 0.01, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}.}\label{fig:figTm}
+\end{figure}
+
+\newpage
+\bibliography{ASOmodels}
+
+
+\end{document}
