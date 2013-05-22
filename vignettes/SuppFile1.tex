@@ -296,7 +296,7 @@ Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a funct
 \end{figure}
 
 \section{Supplementary Figure S4}
-After a while the relative target concentration reaches a plateau. In Supplementary Figure S3 the plateu starts around $50min$. The mean of $\Trel$ within the plateu is calculated through the function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these the $IC_{50}$ values can be calculated using the \texttt{IC50stoc()} function and subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right).
+After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right):
 \begin{Schunk}
 \begin{Sinput}
 > lseq <- c(1,2.5,5,7.5)
@@ -305,40 +305,4 @@ After a while the relative target concentration reaches a plateau. In Supplement
 > #### Generation of dose-response curves
 > DRcurve <- lapply(KM,function(kmi){ 
 +             sapply(10^seq(2.5,6,by=0.2),
-+                    function(i) Trelstoc(i,km1=kmi)$Tstat)})
-> DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
-> #### Calculation of IC50
-> IC50_KM <- sapply(1:length(DRc),
-+               function(x){IC50stoc(DRc[[x]][2,],DRc[[x]][1,])})
-\end{Sinput}
-\end{Schunk}
-\begin{figure}[!h]
-\begin{Ncenter}
-\includegraphics[width=\textwidth]{SuppFile1-IC50.pdf}
-\end{Ncenter}
-\caption{Left: Dose-response curves for various values of $\kmo$. Right: The $IC_{50}$-value as a function of $\kmo$.}\label{fig:figIC50}
-\end{figure}
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Supplementary Figure S5}
-\begin{figure}[!h]
-\begin{Ncenter}
-\includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
-\end{Ncenter}
-\caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
-\end{figure}
-
-\section{Supplementary Figure S6}
-\begin{figure}[!h]
-\begin{Ncenter}
-\includegraphics[width=\textwidth]{SuppFigS3.pdf}
-\end{Ncenter}
-\caption{Measured melting temperature vs predicted melting temperatur. There are clear correlations (r > 0.92, P < 0.01, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}.}\label{fig:figTm}
-\end{figure}
-
-\newpage
-\bibliography{ASOmodels}
-
-
-\end{document}
++                    function(i) Trelstoc(i,kOT=kmi)$Tstat)})

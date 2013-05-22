@@ -315,7 +315,7 @@ Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a funct
 \end{figure}
 
 \section{Supplementary Figure S4}
-After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right).
+After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right):
 <<echo=T>>=
 lseq <- c(1,2.5,5,7.5)
 #### Sequence of k(OT -> O+T) values
