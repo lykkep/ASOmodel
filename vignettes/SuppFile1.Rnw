@@ -23,11 +23,12 @@
 \newcommand{\kt}{k_{OT+E \to OTE}}
 \newcommand{\kc}{k_{OT+E \to OTE}}
 \newcommand{\kE}{k_{OTE \to OCE}}
-\newcommand{\kD}{k_{*C \to *+C}}
+\newcommand{\kD}{k_{OC \to O+C}}
 \newcommand{\vp}{v_{\mathrm{prod}}}
 \newcommand{\vd}{v_{\mathrm{degrad}}}
 \newcommand{\Trel}{T_{\rm{rel}}}
 \newcommand{\Trelmin}{T_{\rm{rel,min}}}
+\newcommand{\EC}{EC_{\rm{50}}}
 
 \makeatletter 
 \renewcommand{\thefigure}{S\@arabic\c@figure}
@@ -58,9 +59,9 @@ The ASOmodels package contains the following functions:
 \item \texttt{TrelNO}
 \item \texttt{Trelstoc}
 \item \texttt{plot.doseresponse}
-\item \texttt{IC50}
-\item \texttt{IC50NO}
-\item \texttt{IC50stoc}
+\item \texttt{EC50}
+\item \texttt{EC50NO}
+\item \texttt{EC50stoc}
 \item \texttt{diffASO}
 \item \texttt{pretty10expLP}
 \end{enumerate}
@@ -107,10 +108,10 @@ When there is no oligonucleotide added to the system, then the steady-state conc
 \Trel = \frac{[T]+[OT]+[OTE]}{\frac{\vp}{ \vd}} \enspace.
 \end{equation}
 
-%IC50
-The half maximal inhibitory concentration ($IC_{50}$) is the concentration of total nucleotide needed to inhibit the target concentration by half. The $IC_{50}$ is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $IC_{50}$ value. In mathematical terms the $IC_{50}$ value is defined as
+%EC50
+The half maximal inhibitory concentration ($\EC50$) is the concentration of total nucleotide needed to inhibit the target concentration by half. The $\EC50$ is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $\EC50$ value. In mathematical terms the $\EC50$ value is defined as
 \begin{equation}
-IC_{50} = \left(O_t \left|\, \Trel = \frac{\mathrm{Eff}}{2}+\Trelmin \right.\right)  \enspace, \label{eq::IC50}
+\EC50 = \left(O_t \left|\, \Trel = \frac{\mathrm{Eff}}{2}+\Trelmin \right.\right)  \enspace, \label{eq::EC50}
 \end{equation}
 where the efficacy (Eff, the maximum decrease in $\Trel$), and the minimum value of $\Trel$ ($\Trelmin$) are defined by
 \begin{equation}
@@ -189,11 +190,11 @@ plot.doseresponse('kcleav',c(1,100,1000),
 \end{figure}
 
 \section{Supplementary Figure S2}
-Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $IC_{50}$ value. This is calculated through the R-function \texttt{IC50()} that takes $K_{dOT}$ and the set of parameters as input:
+Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC50$ value. This is calculated through the R-function \texttt{EC50()} that takes $K_{dOT}$ and the set of parameters as input:
 <<>>=
-IC50(KdOT=0.1,param=parms)
+EC50(KdOT=0.1,param=parms)
 @
-For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated. Supplementary Figure~\ref{fig::Opt} shows $IC_{50}$ as a function of $K_{dOT}$ for various parameter values. It can be seen that the optimum affinity, quantified by $K_{dOT}$, changes as parameters are changed. A lower value of $K_{dOT}$ correponds to a better affinity for the oligonucleotide.
+For a sequence of $K_{dOT}$ the corresponding $\EC50$ values can be calculated. Supplementary Figure~\ref{fig::Opt} shows $\EC50$ as a function of $K_{dOT}$ for various parameter values. It can be seen that the optimum affinity, quantified by $K_{dOT}$, changes as parameters are changed. A lower value of $K_{dOT}$ correponds to a better affinity for the oligonucleotide.
 % %
 % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
 % parc <- c('Et','alpha','vprod','KdOTE','kcleav','vdegrad')
@@ -203,14 +204,14 @@ For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated
 %                   vt=c(0.001,0.01,1.5),D2=c(0.5,10,100),
 %                  kE=c(5,100,200),kd=c(0.005,0.05,0.5)) 
 % D1_seq <- 10^seq(-3,3,by=0.25)
-% IC50_fit <- as.list(1:length(parc))
+% EC50_fit <- as.list(1:length(parc))
 % for(j in 1:length(parc)){
 %  Lparseq <- parRange[[j]]
-%  IC50_fit[[j]] <- matrix(NA, nrow=length(Lparseq),ncol=length(D1_seq))
+%  EC50_fit[[j]] <- matrix(NA, nrow=length(Lparseq),ncol=length(D1_seq))
 %  
 %  for(i in 1:length(Lparseq)){
 %    parmsb <- parms; parmsb[parc[j]] <- Lparseq[i]
-%    IC50_fit[[j]][i,] <- sapply(D1_seq,IC50,param=parmsb)
+%    EC50_fit[[j]][i,] <- sapply(D1_seq,EC50,param=parmsb)
 %  }
 % }
 % cbar <- c('orange','darkgreen','black')
@@ -223,13 +224,13 @@ For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated
 %  
 %  for(i in 1:length(Lparseq)){
 %    if(i==1){
-%      plot(D1_seq,IC50_fit[[j]][1,],log='xy',panel.first=grid(col='grey',lty=3),
-%            ylab=expression(IC[50]~' (nM)'),col=cbar[i],
+%      plot(D1_seq,EC50_fit[[j]][1,],log='xy',panel.first=grid(col='grey',lty=3),
+%            ylab=expression(EC[50]~' (nM)'),col=cbar[i],
 %            ylim=c(1E-1,200),type='l',xaxt='n',yaxt='n',lwd=2,xlab=expression(K[dOT]~'(nM)'))
 %      axis(1,at=c(1E-2,1,1E2),labels=pretty10expLP(10^c(-2,0,2),drop.1=T))
 %      axis(2,at=c(1E-1,1,10,1E2),labels=pretty10expLP(10^c(-1:2),drop.1=T))
 %    }else{
-%      lines(D1_seq,IC50_fit[[j]][i,],col=cbar[i],lwd=2)
+%      lines(D1_seq,EC50_fit[[j]][i,],col=cbar[i],lwd=2)
 %     }
 %   }
 %   legend('bottomright',fill=cbar,cex=0.65,bg='white',x.intersp=0.2,
@@ -246,7 +247,7 @@ For a sequence of $K_{dOT}$ the corresponding $IC_{50}$ values can be calculated
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFile1-S2.pdf}
 \end{Ncenter}
-\caption{The optimum affinity is dependent on the parameter settings. In the panels the $IC_{50}$ concentration is plotted against the binding affinity quantified by $K_{dOT}$ for various parameters. We have varied the total RNAse H concentration ($E_t$), alpha, the rate of target cleavage ($k_{OTE \to OCE}$), the target production ($v_{prod}$) and degradation ($v_{degrad}$), and the dissociation constant for the OTE complex ($D_{OTE}$).}\label{fig::Opt}
+\caption{The optimum affinity is dependent on the parameter settings. In the panels the $\EC50$ concentration is plotted against the binding affinity quantified by $K_{dOT}$ for various parameters. We have varied the total RNAse H concentration ($E_t$), alpha, the rate of target cleavage ($k_{OTE \to OCE}$), the target production ($v_{prod}$) and degradation ($v_{degrad}$), and the dissociation constant for the OTE complex ($D_{OTE}$).}\label{fig::Opt}
 \end{figure}
 
 
@@ -315,7 +316,7 @@ Supplementary Figure S3 shows $\Trel$, from the Gillespie simulation, as a funct
 \end{figure}
 
 \section{Supplementary Figure S4}
-After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $IC_{50}$ values can be calculated using \texttt{IC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right):
+After a while the stochastic simulation reaches a plateau. In Supplementary Figure S3 the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure S4,left). From these $\EC50$ values can be calculated using \texttt{EC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure S4,right):
 <<echo=T>>=
 #### Sequence of k(OT -> O+T) values
 lseq <- c(1,2.5,5,7.5)
@@ -325,11 +326,11 @@ DRcurve <- lapply(lKOT,function(ki){
             sapply(10^seq(2.5,6,by=0.2),
                    function(i) Trelstoc(i,kOT=ki)$Tstat)})
 DRc <- lapply(DRcurve,function(x) x[,!is.na(x[3,])] )
-#### Calculation of IC50
-IC50_lKOT <- sapply(1:length(DRc),
-              function(x){IC50stoc(DRc[[x]][2,],DRc[[x]][1,])})
+#### Calculation of EC50
+EC50_lKOT <- sapply(1:length(DRc),
+              function(x){EC50stoc(DRc[[x]][2,],DRc[[x]][1,])})
 @
-<<IC50,echo=F,fig=TRUE,width=7,height=4,include=FALSE>>=
+<<EC50,echo=F,fig=TRUE,width=7,height=4,include=FALSE>>=
 par(mfcol=c(1,2),mar=c(4,4.5,1,1),mgp=c(2.5,0.7,0))
 N <- length(DRc)
 plot(DRc[[1]][1,],DRc[[1]][2,],ylab='Relative target level',ylim=c(0,1),
@@ -343,14 +344,14 @@ for(i in seq(3,11,by=2)){
 	points(DRc[[i]][1,],DRc[[i]][2,],col=rainbow(N)[i],type='l',lwd=2)
 }
 
-plot(lKOT,IC50_lKOT,log='x',ylab=expression(IC[50]~'(molecules)'),
+plot(lKOT,EC50_lKOT,log='x',ylab=expression(EC[50]~'(molecules)'),
 		xlab=expression(k['OT'%->%'O+T']~'(1/min)'))
 @
 \begin{figure}[!h]
 \begin{Ncenter}
-\includegraphics[width=\textwidth]{SuppFile1-IC50.pdf}
+\includegraphics[width=\textwidth]{SuppFile1-EC50.pdf}
 \end{Ncenter}
-\caption{Left: Dose-response curves for various values of $\kmo$. Right: $IC_{50}$ as a function of $\kmo$.}\label{fig:figIC50}
+\caption{Left: Dose-response curves for various values of $\kmo$. Right: $\EC50$ as a function of $\kmo$.}\label{fig:figEC50}
 \end{figure}
 \newpage
 
