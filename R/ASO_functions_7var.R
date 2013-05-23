@@ -58,10 +58,6 @@ Trel <- function(Ot,param=parms){  #
   sapply(Ot,tmp)
 }
 
-
-###############################################################################
-#### IC50 calculation
-###############################################################################
 #' Calculates the IC50 value at steady-state
 #' 
 #' Use the dose-respons curve to calculate the IC50 value 
