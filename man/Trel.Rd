@@ -1,6 +1,6 @@
 \name{Trel}
 \alias{Trel}
-\title{Calculates the relative Target total target concentration at steady state}
+\title{Calculates the relative Target total target concentration at steady-state}
 \usage{
   Trel(Ot, param = parms)
 }
@@ -20,6 +20,7 @@
   oligonucleotide.
 }
 \examples{
-Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
+Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
+kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
 }
 
