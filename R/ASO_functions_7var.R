@@ -69,7 +69,7 @@ Trel <- function(Ot,param=parms){  #
 #' @examples 
 #' IC50(1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
 #' kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
-IC50 <- function(KdOT,param=parms){
+IC50 <- function(KdOT,param=parms){ #
   param['KdOT'] <- KdOT
   Otseq <- 10^seq(-3,3,length=50)
   Trelseq <- Trel(Otseq,param=param)
