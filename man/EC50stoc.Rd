@@ -1,21 +1,22 @@
-\name{IC50stoc}
-\alias{IC50stoc}
-\title{Calculates the IC50 value for a stochastic simulation of the ASO model}
+\name{EC50stoc}
+\alias{EC50stoc}
+\title{Calculates the EC50 value for a stochastic simulation of the ASO model}
 \usage{
-  IC50stoc(Trel, Ot)
+  EC50stoc(Trel, Ot)
 }
 \arguments{
-  \item{Trel}{The dissociation constant of the OT complex
-  in nM}
+  \item{Trel}{Sequence of stochastic simulated total target
+  levels as output from \code{Trelstoc}}
 
-  \item{Ot}{The total concentration of oligonucleotide}
+  \item{Ot}{Sequence of total oligonucleotide
+  concentrations used to calculate Trel}
 }
 \value{
-  returns the IC50 value
+  returns the EC50 value
 }
 \description{
   Use the stochastic dose-respons curve to calculate the
-  IC50 value concentration before the addition of
+  EC50 value concentration before the addition of
   oligonucleotide.
 }
 \examples{
@@ -48,6 +49,6 @@ nu['OC',c('kC*OC')] <- -1
 
 Otseq <- 10^seq(2.5,6,by=0.2)
 Trelseq <-sapply(Otseq,function(i) Trelstoc(i)$Tstat)})
-IC50STOC <- IC50stoc(Trelseq, Otseq)
+EC50STOC <- EC50stoc(Trelseq, Otseq)
 }
 

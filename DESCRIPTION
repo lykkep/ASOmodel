@@ -17,4 +17,6 @@ Depends:
     nleqslv,
     rootSolve
 Collate:
-    'ASO_functions_7var.R'
+    'IC50FUNCTIONS.R'
+    'MiscFUNCTIONS.R'
+    'TrelFUNCTIONS.R'
