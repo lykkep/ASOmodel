@@ -15,7 +15,8 @@ last <- function(x) { tail(x, n = 1) }
 #' @param parms list of parameters
 #' 
 #' @return returns the relative total target concentration
-#' @example Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
+#' @examples 
+#' Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
 Trel <- function(Ot,param=parms){  #
   
   #### Parameters

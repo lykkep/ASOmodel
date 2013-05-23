@@ -1,2 +1,0 @@
-exportPattern("^[[:alpha:]]+")
-import(drc, deSolve, sfsmisc, TeachingDemos, nleqslv, rootSolve)
