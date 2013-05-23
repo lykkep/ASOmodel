@@ -9,8 +9,10 @@ last <- function(x) { tail(x, n = 1) }
 parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
            kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8)
 
+#' @title
 #' Calculates the relative Target total target concentration at steady-state
 #' 
+#' @description
 #' Use the algebraic solution to the system to the total target concentration at steady state relative to the target 
 #' concentration before the addition of oligonucleotide. 
 #' @param Ot Total concentration of oligonucleotide added to the system in nM
@@ -58,10 +60,12 @@ Trel <- function(Ot,param=parms){  #
   sapply(Ot,tmp)
 }
 
-#' Calculates the IC50 value at steady-state
+#' @title Calculates the IC50 value at steady-state
 #' 
+#' @description
 #' Use the dose-respons curve to calculate the IC50 value 
 #' concentration before the addition of oligonucleotide. 
+#' 
 #' @param KdOT The dissociation constant of the OT complex in nM
 #' @param parms list of parameters
 #' 
@@ -74,8 +78,9 @@ IC50 <- function(KdOT,param=parms){ #
   Otseq <- 10^seq(-3,3,length=50)
   Trelseq <- Trel(Otseq,param=param)
   parms  <- coefficients(drm(Trelseq~Otseq,fct=LL.5()))
-  #b <- parms[1]; c <- parms[2]; d <- parms[3]; e <- parms[4]; f <- parms[5]
-  out <- exp((parms[1]*log(parms[4])+log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])-1))/parms[1]) 
+  out <- exp((parms[1]*log(parms[4])+
+                log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])
+                    -1))/parms[1]) 
   names(out) <- 'IC50'
   out
 }
