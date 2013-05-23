@@ -6,8 +6,10 @@ library(sfsmisc)
 library(drc)
 
 last <- function(x) { tail(x, n = 1) }
+parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
+           kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8)
 
-#' Calculates the relative Target total target concentration at steady state
+#' Calculates the relative Target total target concentration at steady-state
 #' 
 #' Use the algebraic solution to the system to the total target concentration at steady state relative to the target 
 #' concentration before the addition of oligonucleotide. 
@@ -16,7 +18,8 @@ last <- function(x) { tail(x, n = 1) }
 #' 
 #' @return returns the relative total target concentration
 #' @examples 
-#' Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
+#' Trel(0.1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
+#' kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
 Trel <- function(Ot,param=parms){  #
   
   #### Parameters
@@ -59,7 +62,16 @@ Trel <- function(Ot,param=parms){  #
 ###############################################################################
 #### IC50 calculation
 ###############################################################################
-#TODO: document
+#' Calculates the IC50 value at steady-state
+#' 
+#' Use the algebraic solution to the system to the total target concentration at steady state relative to the target 
+#' concentration before the addition of oligonucleotide. 
+#' @param KdOT The dissociation constant of the OT complex in nM
+#' @param parms list of parameters
+#' 
+#' @return returns the IC50 value
+#' @examples 
+#' IC50(1,parms)
 IC50 <- function(KdOT,param=parms){
   param['KdOT'] <- KdOT
   Otseq <- 10^seq(-3,3,length=50)
