@@ -14,12 +14,11 @@
   returns the IC50 value
 }
 \description{
-  Use the algebraic solution to the system to the total
-  target concentration at steady state relative to the
-  target concentration before the addition of
-  oligonucleotide.
+  Use the dose-respons curve to calculate the IC50 value
+  concentration before the addition of oligonucleotide.
 }
 \examples{
-IC50(1,parms)
+IC50(1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
+kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
 }
 
