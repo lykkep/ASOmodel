@@ -13,7 +13,7 @@
 #' @return returns the EC50 value
 #' @examples 
 #' EC50(1,c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
-#' kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8))
+#' kOTpE = 5,vprod = 0.2,kdegrad = 0.04,alpha=0.1,kcleav = 8))
 #' @export
 EC50 <- function(KdOT,param=parms){ #
   param['KdOT'] <- KdOT
@@ -41,27 +41,27 @@ EC50 <- function(KdOT,param=parms){ #
 #' 
 #' @return returns the EC50 value
 #' @examples 
-#' parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  vdegrad = 0.04,  	  
+#' parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  kdegrad = 0.04,  	  
 #' kcleav = 2, kOT =0.06, kOTE=2, kC = 0.1)
 #' #Initital state vector
-#' x0 <- c(Tt=parms1["vprod"]/parms1["vdegrad"],
+#' x0 <- c(Tt=parms1["vprod"]/parms1["kdegrad"],
 #'              OT=0,OTE=0,E=1e3,O=1e5,OCE=0,OC=0)
 #' names(x0) <- c('Tt','OT','OTE','E','O','OCE','OC')
 #' #Propensity vector
-#' a <-  c("vprod","kOpT*O*Tt","vdegrad*Tt","kOT*OT","kOTE*OTE","vdegrad*OT",
-#'          "kOTpE*OT*E","vdegrad*OTE","kcleav*OTE","kC*OC","kOTE*OCE" )
+#' a <-  c("vprod","kOpT*O*Tt","kdegrad*Tt","kOT*OT","kOTE*OTE","kdegrad*OT",
+#'          "kOTpE*OT*E","kdegrad*OTE","kcleav*OTE","kC*OC","kOTE*OCE" )
 #' #State-change matrix
 #' nu <- matrix(0,7,length(a))
 #' dimnames(nu) <- list(names(x0),a)
 #' nu['Tt',c('vprod','kOT*OT')] <- 1
-#' nu['Tt',c('kOpT*O*Tt','vdegrad*Tt')] <- -1 
+#' nu['Tt',c('kOpT*O*Tt','kdegrad*Tt')] <- -1 
 #' nu['OT',c('kOpT*O*Tt','kOTE*OTE')] <- 1
-#' nu['OT',c('kOT*OT','kOTpE*OT*E','vdegrad*OT')] <- -1
+#' nu['OT',c('kOT*OT','kOTpE*OT*E','kdegrad*OT')] <- -1
 #' nu['OTE',c('kOTpE*OT*E')] <- 1
-#' nu['OTE',c('kOTE*OTE','vdegrad*OTE','kcleav*OTE')] <- -1
-#' nu['E',c('kOTE*OTE','vdegrad*OTE','kOTE*OCE')] <- 1
+#' nu['OTE',c('kOTE*OTE','kdegrad*OTE','kcleav*OTE')] <- -1
+#' nu['E',c('kOTE*OTE','kdegrad*OTE','kOTE*OCE')] <- 1
 #' nu['E',c('kOTpE*OT*E')] <- -1
-#' nu['O',c('kOT*OT','vdegrad*OTE','vdegrad*OT','kC*OC')] <- 1
+#' nu['O',c('kOT*OT','kdegrad*OTE','kdegrad*OT','kC*OC')] <- 1
 #' nu['O',c('kOpT*O*Tt')] <- -1
 #' nu['OCE',c('kcleav*OTE')] <- 1
 #' nu['OCE',c('kOTE*OCE')] <- -1

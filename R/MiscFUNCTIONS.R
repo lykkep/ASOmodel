@@ -1,6 +1,6 @@
 last <- function(x) { tail(x, n = 1) }
 parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
-           kOTpE = 5,vprod = 0.2,vdegrad = 0.04,alpha=0.1,kcleav = 8)
+           kOTpE = 5,vprod = 0.2,kdegrad = 0.04,alpha=0.1,kcleav = 8)
 
 ###############################################################################
 #### The ODEs of the ASO model
@@ -9,7 +9,7 @@ parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,
 #' @export
 diffASO <- function(t,y, param){
   k1 =param['kOpT']; D1 = param['KdOT']; k2 = param['kOTpE']; Et <- param['Et']
-  D2 = param['KdOTE']; vt = param['vprod']; k4 = param['vdegrad']
+  D2 = param['KdOTE']; vt = param['vprod']; k4 = param['kdegrad']
   alpha=param['alpha']; kE=param['kcleav'];
   km1 = k1*D1; km2=k2*D2; k3 = km1/alpha
   
