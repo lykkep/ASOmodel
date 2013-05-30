@@ -128,7 +128,7 @@ axis(2,at=Trel(1E6),
 
 
 \subsection*{Figure 2c: An optimum affinity}
-For a sequence of affinities \texttt{D1\_seq} the $EC_{50}$ values are calculated by use of the R-function \texttt{EC50} from the ASOmodels package:
+For a range of affinities \texttt{D1\_seq} the $EC_{50}$ values are calculated by use of the R-function \texttt{EC50()} from the ASOmodels package:
 <<echo=TRUE>>=
 D1_seq <- 10^seq(-3,3.2,by=0.25)
 ECfit <- sapply(D1_seq,EC50)
@@ -139,7 +139,7 @@ parmsNO <- c(parms,kC=parms['kOpT']*parms['KdOT']/parms['alpha'])
 names(parmsNO)[length(parmsNO)] <- 'kC'
 ECfitNO <- sapply(D1_seq,EC50NO) #EC50 without coupling
 @
-For the sequence of affinities the sequences of $EC_{50}$ values are plotted:
+For the range of affinities the corresponding $EC_{50}$-values are plotted:
 <<Fig3,echo=TRUE,fig=TRUE,include=FALSE,width=4,height=4>>=
 plot(D1_seq,ECfit,log='xy',yaxt='n',type='l',xaxt='n',
      xlab=expression(K[dOT]~'(nM)'),ylab=expression(EC[50]~'(nM)'))
@@ -153,7 +153,7 @@ legend('topleft',c('Coupling','No coupling'),lty=c(1,2),bty='n')
 \begin{Ncenter}
 \includegraphics[width=0.5\textwidth]{Vignette2-Fig3}
 \end{Ncenter}
-\caption{2c: The $EC_{50}$ as a function of the dissociation constant for the OT complex. A low $K_{dOT}$ corresponds to a high affinity binding. Dashed line: no coupling of off-rates. Solid line: coupling of off-rates.}
+\caption{2c: $EC_{50}$ as a function of the dissociation constant for the OT complex. A low $K_{dOT}$ corresponds to a high affinity binding. Dashed line: no coupling of off-rates. Solid line: coupling of off-rates.}
 \end{figure}
 
 \section*{Experimental data figures}
@@ -182,7 +182,7 @@ f <- summary(FitF)$fstatistic
 p <- pf(f[1],f[2],f[3],lower.tail=F)
 tmp <- coefficients(FitF) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum==T[m]~x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
       3,line=-2.1)
 title('Luciferase')
 points(Fx,Fy,pch=19,cex=2,col=colL[Flength-11])
@@ -216,7 +216,7 @@ f <- summary(FitS)$fstatistic
 p <- pf(f[1],f[2],f[3],lower.tail=F)
 tmp <- coefficients(FitS) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum==T[m]~x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
       3,line=-2.1)
 title('GR')
 points(Sx,Sy,pch=19,cex=2,col=colL[Slength-11])
@@ -249,7 +249,7 @@ p <- pf(f[1],f[2],f[3],lower.tail=F)
 points(Px,Py,pch=19,cex=2,col=colL[Plength-11])
 tmp <- coefficients(FitP) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum==T[m]~x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
         3,line=-2.1)
 axis(2,1.15E-2,expression(10^-2),tick=F,mgp=c(0,-1.1,0),outer=F)
 title('APOB')
