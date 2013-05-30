@@ -21,14 +21,14 @@
 \newcommand{\kOpT}{k_{\mathrm{O+T \to OT}}}
 \newcommand{\kmt}{k_{\mathrm{OTE \to OT+E}}}
 \newcommand{\kt}{k_{\mathrm{OT+E \to OTE}}}
-\newcommand{\kc}{k_{\mathrm{OT+E \to OTE}}}
 \newcommand{\kE}{k_{\mathrm{OTE \to OCE}}}
 \newcommand{\kD}{k_{\mathrm{OC \to O+C}}}
 \newcommand{\vp}{v_{\mathrm{prod}}}
 \newcommand{\vd}{k_{\mathrm{T \to \emptyset}}}
 \newcommand{\Trel}{T_{\rm{rel}}}
 \newcommand{\EC}{EC_{\rm{50}}}
-\newcommand{\kdOT}{K_{\mathrm{dOT}}}
+\newcommand{\KdOT}{K_{\mathrm{dOT}}}
+\newcommand{\KdOTE}{K_{\mathrm{dOTE}}}
 \newcommand{\Trelmin}{T_{\rm{rel,min}}}
 
 \makeatletter 
@@ -82,7 +82,7 @@ The ASOmodels package contains the following functions:
 The kinetic ASO model governs seven ODEs for the seven variables: free target ($T$), free oligonucleotide ($O$), free RNAse H ($E$), complex of oligonucleotide and target ($OT$), complex of oligonucleotide, target and RNAse H  ($OTE$), complex of cleaved target, oligonucleotide and RNase H ($OCE$), and complex of cleaved target and oligonucleotide  ($OC$).
 \begin{align}
 %T
-\frac{\dif [T]}{\dif t} &= \vp - \vd [T]-k_{O+T \to OT} [T] [O] +k_{OT\to O+T } [OT] \\
+\frac{\dif [T]}{\dif t} &= \vp - \vd [T]-\kOpT [T] [O] +\kmo [OT] \\
 %OT
 \frac{\dif [OT]}{\dif t} &= \kOpT [O][T]-\kmo[OT] \nonumber \\
 	& \quad -\kt[OT][E]+\kmt [OTE]-\vd[OT] \\
@@ -116,7 +116,7 @@ When there is no oligonucleotide added to the system, the steady-state concentra
 \end{equation}
 
 %EC50
-The half maximal effect concentration ($\EC$) is the concentration of total nucleotide needed to reduce the target concentration by half. The $\EC$ is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $\EC$ value. In mathematical terms the $\EC$ value is defined as
+The half maximal effect concentration ($\EC$) is the concentration of total nucleotide needed to reduce the target concentration by half. The $\EC$ is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $\EC$-value. In mathematical terms the $\EC$-value is defined as
 \begin{equation}
 \EC = \left(O_t \left|\, \Trel = \frac{\mathrm{Eff}}{2}+\Trelmin \right.\right)  \enspace, \label{eq::EC50}
 \end{equation}
@@ -137,14 +137,14 @@ Parameter & Description &Default value & Ref  \\
 \hline
 $E_t$ & Total RNAse H concentration & 1 nM & \cite{Amirkhanov:2002vo}\\
 $O_t$ & Total oligonucleotide conc & $\mathcal{O}(\mu M )$ & {}\\
-$v_{prod}$ & Production of target & 0.2 nM/min & \cite{lodish2008molecular}\\
+$\vp$ & Production of target & 0.2 nM/min & \cite{lodish2008molecular}\\
 $\vd$ & Degradation of target & 0.04 $\rm{min}^{-1}$ &  \cite{Yang:2003ja}\\
-$K_{dOT}$ & Dissociation constant of $OT$ & 0.3 nM &  \cite{Christensen:2001te} \\
-$K_{dOTE}$ & Dissociation constant of $OTE$  & 70 nM &  \cite{Amirkhanov:2002vo} \\
-$k_{O+T \to OT }$ & Rate of $O+T \to OT$ & $0.2 \, (\rm{nM \,min})^{-1}$ &  \cite{Christensen:2001te}\\
-$k_{OT+E \to OTE}$ & Rate of $OT+E \to OTE$  & 5 $(\rm{nM \,min})^{-1}$ &  \cite{Amirkhanov:2002vo}\\
-$k_{OTE \to OCE}$ & Rate of cleavage  & 8 $\rm{min}^{-1}$ & \cite{Amirkhanov:2002vo}\\
-$\alpha$ & Ratio of $\frac{k_{OT \to O+T}}{k_{\mathrm{OC \to O+C}}} \le 1$ & 0.1  & {}\\
+$\KdOT$ & Dissociation constant of $OT$ & 0.3 nM &  \cite{Christensen:2001te} \\
+$\KdOTE$ & Dissociation constant of $OTE$  & 70 nM &  \cite{Amirkhanov:2002vo} \\
+$\kOpT$ & Rate of $O+T \to OT$ & $0.2 \, (\rm{nM \,min})^{-1}$ &  \cite{Christensen:2001te}\\
+$\kt$ & Rate of $OT+E \to OTE$  & 5 $(\rm{nM \,min})^{-1}$ &  \cite{Amirkhanov:2002vo}\\
+$\kE$ & Rate of cleavage  & 8 $\rm{min}^{-1}$ & \cite{Amirkhanov:2002vo}\\
+$\alpha$ & Ratio of $\frac{\kmo}{\kD} \le 1$ & 0.1  & {}\\
 \hline
 \end{tabular}
 \end{table}
@@ -169,13 +169,13 @@ $\Trel$ can be calculated for a range of different oligonucleotide concentration
 %%%% FIGURE
 \begin{figure}[!b]
 \includegraphics[width=\textwidth]{SuppFile1-S1.pdf}
-\caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $K_{dOT}$, $\kOpT$, $K_{dOTE}$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table \ref{tb::par}.}\label{fig::Etot}
+\caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $\KdOT$, $\kOpT$, $\KdOTE$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table \ref{tb::par}.}\label{fig::Etot}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S2}
-Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. This is calculated through the R-function \texttt{EC50()} that takes $K_{dOT}$ and the set of parameters as input:
+Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. This is calculated through the R-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
 \begin{Schunk}
 \begin{Sinput}
 > EC50(KdOT=0.1,param=parms)
@@ -185,7 +185,7 @@ Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-respons
 1.218908 
 \end{Soutput}
 \end{Schunk}
-For a range of $K_{dOT}$ values, the corresponding $\EC$-values can be calculated. These can be fitted to a second order polynomial by using the R-function \texttt{lm()}, see Supplementary Figure S2. 
+For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a second order polynomial by using the R-function \texttt{lm()}, see Supplementary Figure S2. 
 \begin{Schunk}
 \begin{Sinput}
 > D1_seq <- 10^seq(-3,3.2,by=0.25)
@@ -197,13 +197,13 @@ For a range of $K_{dOT}$ values, the corresponding $\EC$-values can be calculate
 \begin{Ncenter}
 \includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
 \end{Ncenter}
-\caption{$\EC$ as a function of $\kdOT$ is fitted on a log-log scale to a second order polynomial.}\label{fig::Opt}
+\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a second order polynomial.}\label{fig::Optfit}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S3}
-Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $K_{dOT}$ for various parameter values. It can be seen that the optimum affinity, quantified by $K_{dOT}$, changes as parameters are changed. A lower value of $K_{dOT}$ correponds to a better affinity for the oligonucleotide.
+Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimum affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
 % % % %
 % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
 % parc <- c('Et','alpha','vprod','KdOTE','kcleav','kdegrad')
@@ -256,7 +256,7 @@ Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $K_{dOT}$ for v
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFile1-S2.pdf}
 \end{Ncenter}
-\caption{The optimum affinity is dependent on the parameter settings. In the panels the $\EC$ concentration is plotted against the binding affinity quantified by $K_{dOT}$ for various parameters. We have varied the total RNAse H concentration ($E_t$), $\alpha$, the rate of target cleavage ($k_{OTE \to OCE}$), the target production ($v_{prod}$) and degradation ($\vd$), and the dissociation constant for the OTE complex ($K_{dOTE}$).}\label{fig::Opt}
+\caption{The optimum affinity is dependent on the parameter settings. In the panels the $\EC$ concentration is plotted against the binding affinity quantified by $\KdOT$ for various parameters. We have varied the total RNAse H concentration ($E_t$), $\alpha$, the rate of target cleavage ($\kE$), the target production ($\vp$) and degradation ($\vd$), and the dissociation constant for the OTE complex ($\KdOTE$).}\label{fig::Opt}
 \end{figure}
 
 
@@ -366,8 +366,7 @@ After a while the stochastic simulation reaches a plateau. In Supplementary Figu
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFigS3.pdf}
 \end{Ncenter}
-\caption{Measured melting temperature versus predicted melting temperature. There are clear correlations (r > 0.92, P < 0.01, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}.\\
-Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at 95$^\circ$C for 3min and slowly cooled to 20$^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$ values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
+\caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
 \end{figure}
 
 \newpage

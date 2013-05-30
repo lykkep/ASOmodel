@@ -15,14 +15,13 @@
 \newcommand{\kOpT}{k_{\mathrm{O+T \to OT}}}
 \newcommand{\kmt}{k_{\mathrm{OTE \to OT+E}}}
 \newcommand{\kt}{k_{\mathrm{OT+E \to OTE}}}
-\newcommand{\kc}{k_{\mathrm{OT+E \to OTE}}}
 \newcommand{\kE}{k_{\mathrm{OTE \to OCE}}}
 \newcommand{\kD}{k_{\mathrm{OC \to O+C}}}
 \newcommand{\vp}{v_{\mathrm{prod}}}
 \newcommand{\vd}{k_{\mathrm{T \to \emptyset}}}
 \newcommand{\Trel}{T_{\rm{rel}}}
 \newcommand{\EC}{EC_{\rm{50}}}
-\newcommand{\kdOT}{K_{\mathrm{dOT}}}
+\newcommand{\KdOT}{K_{\mathrm{dOT}}}
 \newcommand{\Trelmin}{T_{\rm{rel,min}}}
 
 \usepackage[labelsep=none]{caption}
@@ -41,7 +40,7 @@ This vignette includes the commands to reproduce Fig. 2 from ``A kinetic model o
 
 <<echo=TRUE>>=
 require(devtools)
-install_github('ASOmodel',username='lykkep')
+#install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
 
@@ -69,13 +68,13 @@ colVAR <- c('black','darkgreen','darkred','orange','green')
 xtime <- TimeSteps <= 35
 
 par(mar=c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
-    cex=0.6,cex.axis=1,las=1)
+    cex=0.7,cex.axis=1.1,las=1)
 for(i in 1:5){ 
   if(i!=1) par(new=TRUE)
   plot(TimeSteps[xtime], solASO[xtime,i], yaxt='n', xaxt='n',
-       ylab='relative concentrations', xlab='minutes',las=1, 
-       col=colVAR[i], type='l', ylim=c(0,1), xlim=c(0,35+26))
-}
+       ylab=ifelse(i==1,'relative concentrations',NA), 
+       xlab=ifelse(i==1,'minutes',NA),las=1, 
+       col=colVAR[i], type='l', ylim=c(0,1), xlim=c(0,35+26)) }
 xtime <- 40
 for(i in 1:5) lines(xtime+0:20,rep(last(solASO)[i],21),
                     col=colVAR[i])
@@ -102,12 +101,13 @@ text(xtime,last(solASO)[4]+0.05,col=colVAR[4],adj=0,
 \begin{Ncenter}
 \includegraphics[width=0.75\textwidth]{Vignette2-Fig1}
 \end{Ncenter}
-\caption{2a: Time resolved simulation of the relative concentrations of key species}
+\caption{2a: Time resolved simulation of the relative concentrations of key species.}
 \end{figure}
 
 \subsection*{Figure 2b: Simulated dose-response curve}
 Given a set of parameters the R-function \texttt{Trel()} from the ASOmodels package calculates the relative target concentration as a function of the total concentration of oligonucleotide added to the system.
 <<Fig2,echo=TRUE,fig=TRUE,include=FALSE,width=4,height=4>>=
+par(mar=c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),las=1)
 curve(Trel,1E-3,5E2,log='x', lwd=2,ylim=c(0,1),
       ylab=expression(T[rel]),xaxt='n',
       xlab='Total oligonucleotide conc (nM)')
@@ -116,19 +116,18 @@ abline(v=EC50(parms['KdOT']),lty=2) #EC50
 axis(1,at=10^c(-3,-1,1,3),
      labels=pretty10expLP(10^c(-3,-1,1,3),drop.1=T))
 axis(1,at=EC50(parms['KdOT']),label=expression(EC[50]))
-axis(2,at=Trel(1E6),
-     label=expression(T[rel*','*min]),las=1)
+axis(2,at=Trel(1E6),label=expression(T[rel*','*min]),las=1)
 @
 \begin{figure}[!h]
 \begin{Ncenter}
 \includegraphics[width=0.5\textwidth]{Vignette2-Fig2}
 \end{Ncenter}
-\caption{2b: The relative total target concentration ($\Trel$) is defined as the steady state level of total target in the presence of oligonucleotide divided by the target concentration in the absence of oligonucleotide. Dashed lines indicate efficacy (horizontal) and $EC_{50}$ (vertical).}
+\caption{2b: The relative total target concentration ($\Trel$) is defined as the steady state level of total target in the presence of oligonucleotide divided by the target concentration in the absence of oligonucleotide. Dashed lines indicate efficacy (horizontal) and $\EC$ (vertical).}
 \end{figure}
 
 
 \subsection*{Figure 2c: An optimum affinity}
-For a range of affinities \texttt{D1\_seq} the $EC_{50}$ values are calculated by use of the R-function \texttt{EC50()} from the ASOmodels package:
+For a range of affinities \texttt{D1\_seq} the $\EC$-values are calculated by use of the R-function \texttt{EC50()} from the ASOmodels package:
 <<echo=TRUE>>=
 D1_seq <- 10^seq(-3,3.2,by=0.25)
 ECfit <- sapply(D1_seq,EC50)
@@ -139,8 +138,9 @@ parmsNO <- c(parms,kC=parms['kOpT']*parms['KdOT']/parms['alpha'])
 names(parmsNO)[length(parmsNO)] <- 'kC'
 ECfitNO <- sapply(D1_seq,EC50NO) #EC50 without coupling
 @
-For the range of affinities the corresponding $EC_{50}$-values are plotted:
+For the range of affinities the corresponding $\EC$-values are plotted:
 <<Fig3,echo=TRUE,fig=TRUE,include=FALSE,width=4,height=4>>=
+par(mar=c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),las=1)
 plot(D1_seq,ECfit,log='xy',yaxt='n',type='l',xaxt='n',
      xlab=expression(K[dOT]~'(nM)'),ylab=expression(EC[50]~'(nM)'))
 lines(D1_seq,ECfitNO,lty=2)
@@ -153,7 +153,7 @@ legend('topleft',c('Coupling','No coupling'),lty=c(1,2),bty='n')
 \begin{Ncenter}
 \includegraphics[width=0.5\textwidth]{Vignette2-Fig3}
 \end{Ncenter}
-\caption{2c: $EC_{50}$ as a function of the dissociation constant for the OT complex. A low $K_{dOT}$ corresponds to a high affinity binding. Dashed line: no coupling of off-rates. Solid line: coupling of off-rates.}
+\caption{2c: $\EC$ as a function of the dissociation constant for the OT complex. A low $\KdOT$ corresponds to a high affinity binding. Dashed line: no coupling of off-rates. Solid line: coupling of off-rates.}
 \end{figure}
 
 \section*{Experimental data figures}
@@ -258,7 +258,7 @@ title('APOB')
 \begin{Ncenter}
 \includegraphics[width=0.5\textwidth]{Vignette2-Fig6}
 \end{Ncenter}
-\caption{2f: 23 oligonucleotides targeted against ApoB.}
+\caption{2f: 23 oligonucleotides targeted against apolipoprotein B.}
 \end{figure}
 
 
