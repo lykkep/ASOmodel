@@ -4,16 +4,19 @@
 \usepackage{Temp_short}
 \usepackage[bottom]{footmisc}
 \usepackage{commath}
+\usepackage{caption} 
+\captionsetup[table]{skip=7pt}
 \setlength{\jot}{0.3cm}
 \allowdisplaybreaks[2]
 
 \newenvironment{Ncenter}{%
   \setlength\topsep{-10pt}
-  \setlength\parskip{-100pt}
+  \setlength\parskip{-10pt}
   \begin{center}
 }{%
   \end{center}
 }
+
 
 \bibliographystyle{abbrv}
 
@@ -33,12 +36,12 @@
 
 \makeatletter 
 \renewcommand{\thefigure}{S\@arabic\c@figure}
-\renewcommand{\thesection}{S\@arabic\c@section}
-\renewcommand{\thetable}{S\@arabic\c@table}
+\renewcommand{\thesection}{~\hspace{-7.5 mm}}
+\renewcommand{\thetable}{}
 \addto\captionsenglish{\renewcommand{\figurename}{Supplementary Figure}}
 \addto\captionsenglish{\renewcommand{\tablename}{Supplementary Table}}
 
-\title{Supplementary File S1 for Pedersen et al. (2013)}
+\title{Supplementary Document for Pedersen et al. (2013)}
 \author{Lykke Pedersen, \and Peter H Hagedorn, \and Marie Lindholm, \and Morten Lindow}
 \date{}
 
@@ -46,12 +49,12 @@
 \SweaveOpts{concordance=TRUE}
 \maketitle
 
-This document is the supplementary file S1 for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides may be more potent" and it is a vignette for the R-package ASOmodels.
+This document is the supplementary file S1 for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent" and it is a vignette for the R-package ASOmodels.
 
-The functions and data used to produce the figures in the main manuscript and this supplementary file are available after installing the ASOmodels package in R
+The functions and data used to produce the figures in the main manuscript and this supplementary file are available after installing the ASOmodels package in R.
 <<>>=
 require(devtools)
-install_github('ASOmodel',username='lykkep')
+#install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
 The ASOmodels package contains the following functions:
@@ -75,23 +78,23 @@ The ASOmodels package contains the following functions:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The rate-equations of the ASO model}
-The kinetic ASO model governs seven ODEs for the seven variables: free target ($T$), free oligonucleotide ($O$), free RNAse H ($E$), complex of oligonucleotide and target ($OT$), complex of oligonucleotide, target and RNAse H  ($OTE$), complex of cleaved target, oligonucleotide and RNase H ($OCE$), and complex of cleaved target and oligonucleotide  ($OC$).
+\section{Supplementary Results}
+The kinetic model governs seven ODEs of the seven variables: free target ($T$), free oligonucleotide ($O$), free RNAse H ($E$), complex of oligonucleotide and target ($OT$), complex of oligonucleotide, target and RNAse H  ($OTE$), complex of cleaved target, oligonucleotide and RNase H ($OCE$), and complex of cleaved target and oligonucleotide  ($OC$).
 \begin{align}
 %T
 \frac{\dif [T]}{\dif t} &= \vp - \vd [T]-\kOpT [T] [O] +\kmo [OT] \\
+%O
+\frac{\dif [O]}{\dif t}&= \kmo [OT]-\kOpT[O][T] \nonumber  \\
+  & \quad +\kD [OC]+\vd([OT]+[OTE])  \\
+%E
+\frac{\dif [E]}{\dif t} &= -\kt[E][OT]+\kmt([OTE]+[OCE]) \nonumber \\
+  & \quad+\vd[OTE]\\
 %OT
 \frac{\dif [OT]}{\dif t} &= \kOpT [O][T]-\kmo[OT] \nonumber \\
 	& \quad -\kt[OT][E]+\kmt [OTE]-\vd[OT] \\
 %OTE
 \frac{\dif [OTE]}{\dif t} &= \kt[E][OT]-\kmt[OTE] \nonumber \\
 	& \quad -(\vd+\kE)[OTE]\\
-%E
-\frac{\dif [E]}{\dif t} &= -\kt[E][OT]+\kmt([OTE]+[OCE]) \nonumber \\
-	& \quad+\vd[OTE]\\
-%O
-\frac{\dif [O]}{\dif t}&= \kmo [OT]-\kOpT[O][T] \nonumber  \\
-  & \quad +\kD [OC]+\vd([OT]+[OTE])  \\
 %ODE
 \frac{\dif [OCE]}{\dif t}& = \kE [OTE]-\kmt [OCE]\\
 %OD
@@ -99,7 +102,7 @@ The kinetic ASO model governs seven ODEs for the seven variables: free target ($
 \end{align}
 Complex formation and breaking are denoted by rate constants $k$ with subscripts. The target production rate is denoted by $\vp$ and the degradation rate by $\vd$.
 
-Steady-state is reached when the Eqs.~(1)-(7) are equated to zero. Using Maple16 the steady-state concentrations are found. They all depend on the roots to a fourth order polynomial with coefficients calculated within the R-function \texttt{Trel()}. The one root that ensures that all concentrations are non-negative and also fullfills that
+We assume steady-state where the Eqs.~(1)-(7) are equal to zero. Using Maple16 the steady-state concentrations are found. They all depend on the roots to a fourth order polynomial with coefficients calculated within the R-function \texttt{Trel()}. The one root that ensures that all concentrations are non-negative and also fullfills that
 \begin{align*}
  &[O]+[OTE]+[OT]+[OCE]+[OC] = O_t \quad \mathrm{and}\\ 
  &[OTE]+[OCE]+[E] = E_t \enspace,
@@ -113,27 +116,26 @@ When there is no oligonucleotide added to the system, the steady-state concentra
 \end{equation}
 
 %EC50
-The half maximal effect concentration ($\EC$) is the concentration of total nucleotide needed to reduce the target concentration by half. The $\EC$ is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $\EC$-value. In mathematical terms the $\EC$-value is defined as
+The half maximal effect concentration ($\EC$) is the concentration of total nucleotide needed to reduce the target concentration by half. The $\EC$-value is a measure of the potency of an oligonucleotide. A more potent oligonucleotide will have a lower $\EC$-value. In mathematical terms the $\EC$-value is defined as
 \begin{equation}
 \EC = \left(O_t \left|\, \Trel = \frac{\mathrm{Eff}}{2}+\Trelmin \right.\right)  \enspace, \label{eq::EC50}
 \end{equation}
-where the efficacy (Eff, the maximum decrease in $\Trel$), and the minimum value of $\Trel$ ($\Trelmin$) are defined by
+where the efficacy (Eff, the maximum decrease in $\Trel$) and the minimum value of $\Trel$ ($\Trelmin$) are defined by
 \begin{equation}
 \textrm{Eff}=1-\lim_{O_t \to \infty} \Trel =1 - \Trelmin \label{eq:Eff} \enspace.
 \end{equation}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Supplementary Table S1}
+\section{Supplementary Table}
 \begin{table}[!h]
-\caption{Default values for the parameter-space of the ASO model. Concentrations are measured in nM and time in min.}\label{tb::par}
+\caption{Default values for the parameter-space of the model. Concentrations are measured in nM and time in min.}\label{tb::par}
 \setlength\extrarowheight{5pt}  %Increases the height of each row
 \begin{tabular}{| l | l | r | l |}
 \hline
 Parameter & Description &Default value & Ref  \\
 \hline
 $E_t$ & Total RNAse H concentration & 1 nM & \cite{Amirkhanov:2002vo}\\
-$O_t$ & Total oligonucleotide conc & $\mathcal{O}(\mu M )$ & {}\\
+$O_t$ & Total oligonucleotide concentration & $\mathcal{O}(\mu M )$ & {}\\
 $\vp$ & Production of target & 0.2 nM/min & \cite{lodish2008molecular}\\
 $\vd$ & Degradation of target & 0.04 $\rm{min}^{-1}$ &  \cite{Yang:2003ja}\\
 $\KdOT$ & Dissociation constant of $OT$ & 0.3 nM &  \cite{Christensen:2001te} \\
@@ -190,7 +192,7 @@ plot.doseresponse('kcleav',c(1,100,1000),
 @
 \begin{figure}[!b]
 \includegraphics[width=\textwidth]{SuppFile1-S1.pdf}
-\caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $\KdOT$, $\kOpT$, $\KdOTE$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table \ref{tb::par}.}\label{fig::Etot}
+\caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $\KdOT$, $\kOpT$, $\KdOTE$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table.}\label{fig::Etot}
 \end{figure}
 
 
@@ -200,7 +202,7 @@ Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-respons
 <<>>=
 EC50(KdOT=0.1,param=parms)
 @
-For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a second order polynomial by using the R-function \texttt{lm()}, see Supplementary Figure S2. 
+For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
 <<>>==
 D1_seq <- 10^seq(-3,3.2,by=0.25)
 ECseq <- sapply(D1_seq,EC50)
@@ -226,13 +228,13 @@ legend('bottomright',c('model','fit'),col=c('black','red'),lwd=2,bty='n')
 \begin{Ncenter}
 \includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
 \end{Ncenter}
-\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a second order polynomial.}\label{fig::Optfit}
+\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S3}
-Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimum affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
+Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimal affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
 % % % %
 % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
 % parc <- c('Et','alpha','vprod','KdOTE','kcleav','kdegrad')
@@ -285,13 +287,13 @@ Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for var
 \begin{Ncenter}
 \includegraphics[width=\textwidth]{SuppFile1-S2.pdf}
 \end{Ncenter}
-\caption{The optimum affinity is dependent on the parameter settings. In the panels the $\EC$ concentration is plotted against the binding affinity quantified by $\KdOT$ for various parameters. We have varied the total RNAse H concentration ($E_t$), $\alpha$, the rate of target cleavage ($\kE$), the target production ($\vp$) and degradation ($\vd$), and the dissociation constant for the OTE complex ($\KdOTE$).}\label{fig::Opt}
+\caption{The optimal affinity is dependent on the parameter settings. In the panels the $\EC$ concentration is plotted against the binding affinity, quantified by $\KdOT$, for various parameters. We have varied the total RNAse H concentration ($E_t$), $\alpha$, the target production ($\vp$), the dissociation constant for the OTE complex ($\KdOTE$), the rate of target cleavage ($\kE$),  and the target degradation ($\vd$).}\label{fig::Opt}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S4}
-The stochastic simulation of the ASOmodel is carried out by use of the \texttt{ssa()} R-function from the GillespieSSA package (v.0.5-4). The inputs to ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
+The stochastic simulation of the model is carried out by use of the \texttt{ssa()} R-function from the GillespieSSA package (v.0.5-4). The inputs to ssa are an initial state vector (x0), which is the initial number of molecules, a propensity vector (a), which denotes the different states of the system, a state-change matrix (nu), which is the change in number of molecule (rows) if a reaction occur (column), the model-parameters (parms) and the final time (tf).
 <<echo=T>>=
 library(GillespieSSA)
 #Model parameters
@@ -352,7 +354,7 @@ Supplementary Figure~\ref{fig:Trelstoc} shows $\Trel$ from the Gillespie simulat
 \begin{Ncenter}
 \includegraphics[width=0.6\textwidth]{SuppFile1-Trel.pdf}
 \end{Ncenter}
-\caption{The time-trace for the relative total target level when the ASO model is simulated stochastically.}\label{fig:Trelstoc}
+\caption{The time-trace for the relative total target level when the model is simulated stochastically.}\label{fig:Trelstoc}
 \end{figure}
 
 

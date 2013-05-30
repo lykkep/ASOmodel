@@ -1,10 +1,10 @@
 \select@language {english}
-\contentsline {section}{\numberline {S1}The rate-equations of the ASO model}{3}{section.1}
-\contentsline {section}{\numberline {S2}Supplementary Table S1}{4}{section.2}
-\contentsline {section}{\numberline {S3}Supplementary Figure S1}{5}{section.3}
-\contentsline {section}{\numberline {S4}Supplementary Figure S2}{6}{section.4}
-\contentsline {section}{\numberline {S5}Supplementary Figure S3}{6}{section.5}
-\contentsline {section}{\numberline {S6}Supplementary Figure S4}{7}{section.6}
-\contentsline {section}{\numberline {S7}Supplementary Figure S5}{9}{section.7}
-\contentsline {section}{\numberline {S8}Supplementary Figure S6}{10}{section.8}
-\contentsline {section}{\numberline {S9}Supplementary Figure S7}{11}{section.9}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Results}{3}{section.1}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Table}{4}{section.2}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S1}{5}{section.3}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S2}{6}{section.4}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S3}{6}{section.5}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S4}{7}{section.6}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S5}{9}{section.7}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S6}{10}{section.8}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S7}{11}{section.9}

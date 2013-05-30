@@ -36,7 +36,7 @@
 
 
 \maketitle
-This vignette includes the commands to reproduce Fig. 2 from ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides may be more potent". The R-functions from the ASOmodels package are used and the package is loaded by the commands
+This vignette includes the commands to reproduce Fig. 2 from ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent". The R-functions from the ASOmodels package are used and the package is loaded by the commands
 
 <<echo=TRUE>>=
 require(devtools)
@@ -45,8 +45,8 @@ require(ASOmodels)
 @
 
 \section*{Kinetic model figures}
-\subsection*{Figure 2a: Time-resolved simulation of the ASO model}
-Parameters for the ASO model, the initial concentrations and the time-steps for which the simulation is performed:
+\subsection*{Figure 2a: Time-resolved simulation of the model}
+Parameters for the model, the initial concentrations and the time-steps for which the simulation is performed:
 <<echo=TRUE>>=
 parms <- c(Et = 1,KdOT = 0.3,kOpT = 0.2,KdOTE = 70,kOTpE = 5,  
            vprod = 0.2,kdegrad = 0.04,alpha=0.1,kcleav = 8)
@@ -54,7 +54,7 @@ init <- c(T=parms['vprod']/parms['kdegrad'], OT=0, OTE=0,
           E=parms['Et'], O=100, OCE=0, OC=0)
 TimeSteps <- c(seq(0,4.3,by=5E-2),seq(5,65,by=1))
 @
-Using \texttt{vode()} the ASO model is simulated in time. The function \texttt{diffASO()} is part of the ASOmodels package. 
+Using \texttt{vode()} the model is simulated in time. The function \texttt{diffASO()} is part of the ASOmodels package. 
 <<echo=TRUE>>=
 solASO <- vode(init,TimeSteps,diffASO,parms)
 @
@@ -126,7 +126,7 @@ axis(2,at=Trel(1E6),label=expression(T[rel*','*min]),las=1)
 \end{figure}
 
 
-\subsection*{Figure 2c: An optimum affinity}
+\subsection*{Figure 2c: An optimal affinity}
 For a range of affinities \texttt{D1\_seq} the $\EC$-values are calculated by use of the R-function \texttt{EC50()} from the ASOmodels package:
 <<echo=TRUE>>=
 D1_seq <- 10^seq(-3,3.2,by=0.25)
@@ -182,7 +182,7 @@ f <- summary(FitF)$fstatistic
 p <- pf(f[1],f[2],f[3],lower.tail=F)
 tmp <- coefficients(FitF) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimal~T[m] == x*degree,list(x=round(xmin)))),
       3,line=-2.1)
 title('Luciferase')
 points(Fx,Fy,pch=19,cex=2,col=colL[Flength-11])
@@ -216,7 +216,7 @@ f <- summary(FitS)$fstatistic
 p <- pf(f[1],f[2],f[3],lower.tail=F)
 tmp <- coefficients(FitS) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimal~T[m] == x*degree,list(x=round(xmin)))),
       3,line=-2.1)
 title('GR')
 points(Sx,Sy,pch=19,cex=2,col=colL[Slength-11])
@@ -249,7 +249,7 @@ p <- pf(f[1],f[2],f[3],lower.tail=F)
 points(Px,Py,pch=19,cex=2,col=colL[Plength-11])
 tmp <- coefficients(FitP) ; xmin <- -tmp[2]/(2*tmp[3])
 mtext(paste('p-value =',signif(p,2)),3,line=-1)
-mtext(as.expression(substitute(Optimum~T[m] == x*degree,list(x=round(xmin)))),
+mtext(as.expression(substitute(Optimal~T[m] == x*degree,list(x=round(xmin)))),
         3,line=-2.1)
 axis(2,1.15E-2,expression(10^-2),tick=F,mgp=c(0,-1.1,0),outer=F)
 title('APOB')
