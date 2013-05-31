@@ -50,9 +50,9 @@
 \input{SuppFile1-concordance}
 \maketitle
 
-This document is the supplementary file S1 for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent" and it is a vignette for the R-package ASOmodels.
+This document is the Supplementary Document for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent" and it is a vignette for the R-package ASOmodels.
 
-The functions and data used to produce the figures in the main manuscript and this supplementary file are available after installing the ASOmodels package in R.
+With the aim of maximising reproducibility, the functions and data used to produce the figures in the main manuscript and this supplementary document are available after installing the ASOmodels package in R.
 \begin{Schunk}
 \begin{Sinput}
 > require(devtools)
@@ -60,7 +60,7 @@ The functions and data used to produce the figures in the main manuscript and th
 > require(ASOmodels)
 \end{Sinput}
 \end{Schunk}
-The ASOmodels package contains the following functions:
+The ASOmodels package defines and documents the following functions that are used in this document:
 \begin{enumerate}
 \item \texttt{Trel}
 \item \texttt{TrelNO}
@@ -105,7 +105,7 @@ The kinetic model governs seven ODEs of the seven variables: free target ($T$), 
 \end{align}
 Complex formation and breaking are denoted by rate constants $k$ with subscripts. The target production rate is denoted by $\vp$ and the degradation rate by $\vd$.
 
-We assume steady-state where the Eqs.~(1)-(7) are equal to zero. Using Maple16 the steady-state concentrations are found. They all depend on the roots to a fourth order polynomial with coefficients calculated within the R-function \texttt{Trel()}. The one root that ensures that all concentrations are non-negative and also fullfills that
+We assume steady-state where the Eqs.~(1)-(7) are equal to zero. Using Maple16 the steady-state concentrations are algebraicly found. They all depend on the roots to a fourth order polynomial with coefficients calculated within the R-function \texttt{Trel()}. The one root that ensures that all concentrations are non-negative and also fullfills that
 \begin{align*}
  &[O]+[OTE]+[OT]+[OCE]+[OC] = O_t \quad \mathrm{and}\\ 
  &[OTE]+[OCE]+[E] = E_t \enspace,
@@ -155,7 +155,7 @@ $\alpha$ & Ratio of $\frac{\kmo}{\kD} \le 1$ & 0.1  & {}\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S1}
-The R-function \texttt{Trel()} calculates $\Trel$ and takes $O_t$ and the set of parameters as input:
+The R-function \texttt{Trel()} calculates $\Trel$ as a function of $O_t$ and the set of parameters as in the example below:
 \begin{Schunk}
 \begin{Sinput}
 > #The parameters are in vector-format
@@ -177,7 +177,7 @@ $\Trel$ can be calculated for a range of different oligonucleotide concentration
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S2}
-Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. This is calculated through the R-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
+Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. We are interested in $\EC$ as a function of $\KdOT$. This is calculated through the ASOmodel-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
 \begin{Schunk}
 \begin{Sinput}
 > EC50(KdOT=0.1,param=parms)
@@ -327,7 +327,8 @@ Supplementary Figure~\ref{fig:Trelstoc} shows $\Trel$ from the Gillespie simulat
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S5}
-After a while the stochastic simulation reaches a plateau. In Supplementary Figure~\ref{fig:Trelstoc} the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure~\ref{fig:stocEC50},left). From these $\EC$-values can be calculated using \texttt{EC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure~\ref{fig:stocEC50},right):
+After a while the stochastic simulation reaches a plateau. In Supplementary Figure~\ref{fig:Trelstoc} the plateu starts around $50$min. The mean of $\Trel$ within the plateu is calculated through the R-function \texttt{Trelstoc()}. Using this function we can generate dose-response curves (Supplementary Figure~\ref{fig:stocEC50},left). From these $\EC$-values can be calculated using \texttt{EC50stoc()} and they are subsequently plotted as a function of $\kmo$ (Supplementary Figure~\ref{fig:stocEC50},right).
+Note that as in the deterministic case (see main manuscript) an optimal affinity is observed.
 \begin{Schunk}
 \begin{Sinput}
 > #### Sequence of k(OT -> O+T) values
