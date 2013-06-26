@@ -262,4 +262,71 @@ title('APOB')
 \end{figure}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Figure 4}
+% Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimal affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
+% % % % %
+% % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
+% parc <- c('Et','alpha','vprod','KdOTE','kcleav','kdegrad')
+% parRange <- list(etot=c(0.01,1,10),alpha=c(0.005,0.01,0.95),
+%                   vt=c(0.001,0.01,1.5),D2=c(0.5,10,100),
+%                  kE=c(5,100,200),kd=c(0.005,0.05,0.5)) 
+% D1_seq <- 10^seq(-3,3,by=0.25)
+% EC50_fit <- as.list(1:length(parc))
+% for(j in 1:length(parc)){
+%  Lparseq <- parRange[[j]]
+%  EC50_fit[[j]] <- matrix(NA, nrow=length(Lparseq),ncol=length(D1_seq))
+%  
+%  for(i in 1:length(Lparseq)){
+%    parmsb <- parms; parmsb[parc[j]] <- Lparseq[i]
+%    EC50_fit[[j]][i,] <- sapply(D1_seq,EC50,param=parmsb)
+%  }
+% }
+% cbar <- c('orange','darkgreen','black')
+% xlabl <- list(~nM,~phantom(0),~'nM/min',~nM,'/min','/min')
+% xlabll <- list(~italic(E[t]),~symbol(alpha),~italic(v)[prod],~italic(K)[dOTE],
+%                 ~italic(k)[OTE%->%OCE],~italic(k)[T%->% Ø])
+% #pdf('Documents/ASOmodels/Public/main_figures/Figure4_vs2.pdf',width=3.4,height=4.5)
+% layout(matrix(c(1:6),3,2,byrow=T),width=c(1,0.87),heights=c(1,1,1.25))
+% for(j in c(1,2,3,6,4,5)){
+%  Lparseq <- parRange[[j]]
+% 
+%  par(cex=0.6,bty='o',mgp=c(1.8,0.55,0),las=1,tcl=-0.4)
+%  if(j == 1) par(mar=c(0,3,0.5,0),xaxt='n')
+%  if(j == 2) par(mar=c(0,0.5,0.5,0.5),xaxt='n',yaxt='n')
+%  if(j == 3) par(mar=c(0,3,0.5,0),xaxt='n',yaxt='s')
+%  if(j == 6) par(mar=c(0,0.5,0.5,0.5),xaxt='n',yaxt='n')
+%  if(j == 4) par(mar=c(3,3,0.5,0),xaxt='s',yaxt='s')
+%  if(j == 5) par(mar=c(3,0.5,0.5,0.5),xaxt='s',yaxt='n')
+%  
+%  for(i in 1:length(Lparseq)){
+%    if(i==1){
+%      plot(D1_seq,EC50_fit[[j]][1,],log='xy',panel.first=grid(col='grey',lty=3),
+%            ylab=expression(italic('EC')[50]~' (nM)'),col=cbar[i],
+%            ylim=c(1E-1,200),type='l',xaxt='n',yaxt='n',lwd=2,
+%            xlab=expression(italic(K)[dOT]~'(nM)'),cex.lab=1)
+%      axis(1,at=c(1E-2,1,1E2),labels=pretty10expLP(10^c(-2,0,2),drop.1=T))
+%      axis(2,at=c(1E-1,1,10,1E2),labels=pretty10expLP(10^c(-1:2),drop.1=T))
+%    }else{
+%      lines(D1_seq,EC50_fit[[j]][i,],col=cbar[i],lwd=2)
+%     }
+%   }
+%   legend('bottomright',fill=cbar,cex=0.8,bg='white',x.intersp=0.2,
+%           legend=as.expression(sapply(Lparseq,
+%                            function(x) substitute(x*y,list(x=x,y=xlabl[[j]])))),
+%           border=cbar,bty='o',box.lwd=0.5)
+%   legend('top',as.expression(xlabll[[j]]),bty='n',cex=1.2)
+% }
+% #dev.off()
+% % % % @
+% % % 
+% 
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=\textwidth]{Figure4_vs2.pdf}
+% \end{Ncenter}
+% \caption{The optimal affinity is dependent on the parameter settings. In the panels the $\EC$ concentration is plotted against the binding affinity, quantified by $\KdOT$, for various parameters. We have varied the total RNAse H concentration ($E_t$), $\alpha$, the target production ($\vp$), the dissociation constant for the OTE complex ($\KdOTE$), the rate of target cleavage ($\kE$),  and the target degradation ($\vd$).}\label{fig::Opt}
+% \end{figure}
+
+
 \end{document}

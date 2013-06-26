@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  31 MAY 2013 13:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  26 JUN 2013 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,66 +568,51 @@ File1.toc)
 \openout5 = `SuppFile1.toc'.
 
 
-[2] [3]
-Overfull \hbox (4.60483pt too wide) in paragraph at lines 136--152
-[][] 
- []
-
-[4] <SuppFile1-S1.pdf, id=118, 505.89pt x 361.35pt>
+[2] <SuppFile1-S1.pdf, id=63, 505.89pt x 361.35pt>
 File: SuppFile1-S1.pdf Graphic file (type pdf)
  <use SuppFile1-S1.pdf>
-Package pdftex.def Info: SuppFile1-S1.pdf used on input line 173.
+Package pdftex.def Info: SuppFile1-S1.pdf used on input line 99.
 (pdftex.def)             Requested size: 360.0pt x 257.14474pt.
 
-[5 <./SuppFile1-S1.pdf>] <SuppFile1-S31.pdf, id=130, 289.08pt x 216.81pt>
+[3 <./SuppFile1-S1.pdf>] <SuppFile1-S31.pdf, id=79, 289.08pt x 216.81pt>
 File: SuppFile1-S31.pdf Graphic file (type pdf)
 
 <use SuppFile1-S31.pdf>
-Package pdftex.def Info: SuppFile1-S31.pdf used on input line 200.
+Package pdftex.def Info: SuppFile1-S31.pdf used on input line 126.
 (pdftex.def)             Requested size: 216.0022pt x 162.00168pt.
- <SuppFile1-S2.pdf, id=132, 469.755pt x 505.89pt>
-File: SuppFile1-S2.pdf Graphic file (type pdf)
-
-<use SuppFile1-S2.pdf>
-Package pdftex.def Info: SuppFile1-S2.pdf used on input line 259.
-(pdftex.def)             Requested size: 360.0pt x 387.69159pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./SuppFile1-S31.pdf>] [7 <./SuppFile1-S2.pdf>]
-<SuppFile1-Trel.pdf, id=158, 361.35pt x 289.08pt>
+ [4 <./SuppFile1-S31.pdf>]
+<SuppFile1-Trel.pdf, id=92, 361.35pt x 289.08pt>
 File: SuppFile1-Trel.pdf Graphic file (type pdf)
  <use SuppFile1-Trel.pdf>
-Package pdftex.def Info: SuppFile1-Trel.pdf used on input line 322.
+Package pdftex.def Info: SuppFile1-Trel.pdf used on input line 191.
 (pdftex.def)             Requested size: 216.0022pt x 172.8009pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] <SuppFile1-EC50.pdf, id=167, 505.89pt x 289.08pt>
+[5] <SuppFile1-EC50.pdf, id=101, 505.89pt x 289.08pt>
 File: SuppFile1-EC50.pdf Graphic file (type pdf)
  <use SuppFile1-EC50.pdf>
-Package pdftex.def Info: SuppFile1-EC50.pdf used on input line 349.
+Package pdftex.def Info: SuppFile1-EC50.pdf used on input line 218.
 (pdftex.def)             Requested size: 360.0pt x 205.71579pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./SuppFile1-Trel.pdf>] <SuppFig_PS.pdf, id=178, 390.45876pt x 381.425pt>
+[6 <./SuppFile1-Trel.pdf>] <SuppFig_PS.pdf, id=112, 390.45876pt x 381.425pt>
 File: SuppFig_PS.pdf Graphic file (type pdf)
 
 <use SuppFig_PS.pdf>
-Package pdftex.def Info: SuppFig_PS.pdf used on input line 360.
+Package pdftex.def Info: SuppFig_PS.pdf used on input line 229.
 (pdftex.def)             Requested size: 233.9978pt x 228.5832pt.
- <SuppFigS3.pdf, id=181, 454.69875pt x 178.6675pt>
+ <SuppFigS3.pdf, id=115, 454.69875pt x 178.6675pt>
 File: SuppFigS3.pdf Graphic file (type pdf)
 
 <use SuppFigS3.pdf>
-Package pdftex.def Info: SuppFigS3.pdf used on input line 370.
+Package pdftex.def Info: SuppFigS3.pdf used on input line 239.
 (pdftex.def)             Requested size: 360.0pt x 141.45929pt.
- [10 <./SuppFile1-EC50.pdf> <./SuppFig_PS.pdf>] [11 <./SuppFigS3.pdf>] (./SuppF
-ile1.bbl)
+ [7 <./SuppFile1-EC50.pdf> <./SuppFig_PS.pdf>] [8 <./SuppFigS3.pdf>] (./SuppFil
+e1.bbl)
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -635,47 +620,46 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 0.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
-[12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
+
+Package caption Warning: Unused \captionsetup[table] on input line 8.
+See the caption package documentation for explanation.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
  (./SuppFile1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 379.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `SuppFile1.out' has not changed.
-(rerunfilecheck)             Checksum: 35F32BB0E887026A5E257683DB665BEE;516.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
+(rerunfilecheck)             Checksum: 4A239AED7DF638DCE4F9F09B79A13907;348.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 9422 strings out of 493633
- 139233 string characters out of 3143378
- 242556 words of memory out of 3000000
- 12472 multiletter control sequences out of 15000+200000
- 31177 words of font info for 67 fonts, out of 3000000 for 9000
+ 9372 strings out of 493633
+ 138455 string characters out of 3143378
+ 234837 words of memory out of 3000000
+ 12447 multiletter control sequences out of 15000+200000
+ 28176 words of font info for 65 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 53i,11n,92p,1167b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,7n,92p,1166b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texliv
-e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/
-texmf-dist/fonts/type1/public/cm-super/sfst1095.pfb>
-Output written on SuppFile1.pdf (12 pages, 575370 bytes).
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/cm-super/sfst1095.pfb>
+Output written on SuppFile1.pdf (9 pages, 512646 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
- 58 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
