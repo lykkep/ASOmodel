@@ -262,11 +262,11 @@ title('APOB')
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Figure 4}
-% Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimal affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
-% % % % %
-% % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % \section{Figure 4}
+% % Supplementary Figure~\ref{fig::Opt} shows $\EC$ as a function of $\KdOT$ for various parameter values. It can be seen that the optimal affinity, quantified by $\KdOT$, changes as parameters are changed. A lower value of $\KdOT$ correponds to a better affinity for the oligonucleotide.
+% % % % % %
+% % % <<S2,echo=FALSE,fig=TRUE,include=FALSE,width=7,height=4>>=
 % parc <- c('Et','alpha','vprod','KdOTE','kcleav','kdegrad')
 % parRange <- list(etot=c(0.01,1,10),alpha=c(0.005,0.01,0.95),
 %                   vt=c(0.001,0.01,1.5),D2=c(0.5,10,100),
@@ -282,11 +282,11 @@ title('APOB')
 %    EC50_fit[[j]][i,] <- sapply(D1_seq,EC50,param=parmsb)
 %  }
 % }
-% cbar <- c('orange','darkgreen','black')
-% xlabl <- list(~nM,~phantom(0),~'nM/min',~nM,'/min','/min')
-% xlabll <- list(~italic(E[t]),~symbol(alpha),~italic(v)[prod],~italic(K)[dOTE],
-%                 ~italic(k)[OTE%->%OCE],~italic(k)[T%->% Ø])
-% #pdf('Documents/ASOmodels/Public/main_figures/Figure4_vs2.pdf',width=3.4,height=4.5)
+% cbar <- c(1,2,3)
+% xlabll <- list(~italic(E[t])~'(nM)',~symbol(alpha),
+%                 ~italic(v)[prod]~'(nM/min)',~italic(K)[dOTE]~'(nM)',
+%                 ~italic(k)[OTE%->%OCE]~'(1/min)',~italic(k)[T%->% Ø]~'(1/min)')
+% pdf('Documents/ASOmodels/Public/main_figures/Figure4_vs2.pdf',width=3.4,height=4.5)
 % layout(matrix(c(1:6),3,2,byrow=T),width=c(1,0.87),heights=c(1,1,1.25))
 % for(j in c(1,2,3,6,4,5)){
 %  Lparseq <- parRange[[j]]
@@ -301,23 +301,25 @@ title('APOB')
 %  
 %  for(i in 1:length(Lparseq)){
 %    if(i==1){
-%      plot(D1_seq,EC50_fit[[j]][1,],log='xy',panel.first=grid(col='grey',lty=3),
-%            ylab=expression(italic('EC')[50]~' (nM)'),col=cbar[i],
-%            ylim=c(1E-1,200),type='l',xaxt='n',yaxt='n',lwd=2,
-%            xlab=expression(italic(K)[dOT]~'(nM)'),cex.lab=1)
+%      plot(D1_seq,EC50_fit[[j]][1,],log='xy',
+%            ylab=expression(italic('EC')[50]~' (nM)'),lty=cbar[i],
+%            ylim=c(1E-1,200),type='l',xaxt='n',yaxt='n',lwd=1.5,
+%            xlab=expression(italic(K)[dOT]~'(nM)'),cex.lab=1.1)
+%       xleg1 <- 10^(par('usr')[1]*1.2); yleg1 <- 10^par('usr')[4]
+%       yleg2 <- 10^(par('usr')*0.94)[3]
 %      axis(1,at=c(1E-2,1,1E2),labels=pretty10expLP(10^c(-2,0,2),drop.1=T))
 %      axis(2,at=c(1E-1,1,10,1E2),labels=pretty10expLP(10^c(-1:2),drop.1=T))
 %    }else{
-%      lines(D1_seq,EC50_fit[[j]][i,],col=cbar[i],lwd=2)
+%      lines(D1_seq,EC50_fit[[j]][i,],lty=cbar[i],lwd=1.5)
 %     }
 %   }
-%   legend('bottomright',fill=cbar,cex=0.8,bg='white',x.intersp=0.2,
-%           legend=as.expression(sapply(Lparseq,
-%                            function(x) substitute(x*y,list(x=x,y=xlabl[[j]])))),
-%           border=cbar,bty='o',box.lwd=0.5)
-%   legend('top',as.expression(xlabll[[j]]),bty='n',cex=1.2)
+%   legend('bottomright',cex=0.8,bg='white',x.intersp=1,
+%           legend=Lparseq,lty=cbar,bty='n',box.lwd=0.1)
+%   legend(xleg1,yleg2,as.expression(xlabll[[j]]),
+%           bty='n',cex=1,yjust=0.27,xjust=0)
+%   legend(xleg1,yleg1,letters[c(1,2,3,5,6,4)][j],bty='n',cex=1.5,yjust=0.8,xjust=0)        
 % }
-% #dev.off()
+% dev.off()
 % % % % @
 % % % 
 % 
