@@ -1,7 +1,6 @@
 \select@language {english}
-\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S1}{3}{section.1}
-\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S2}{4}{section.2}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S1}{2}{section.1}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S2}{3}{section.2}
 \contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S3}{4}{section.3}
-\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S4}{6}{section.4}
-\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S5}{7}{section.5}
-\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S6}{8}{section.6}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S4}{5}{section.4}
+\contentsline {section}{\numberline {~\hspace {-7.5 mm}}Supplementary Figure S5}{6}{section.5}

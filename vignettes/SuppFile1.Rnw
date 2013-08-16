@@ -49,28 +49,23 @@
 \SweaveOpts{concordance=TRUE}
 \maketitle
 
-This document is the Supplementary Document for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent" and it is a vignette for the R-package ASOmodels.
+This document is the Supplementary Document for the manuscript entitled ``A kinetic model explains why shorter and less
+affine enzyme-recruiting oligonucleotides can be
+more potent" and it is a vignette for the R-package ASOmodels.
 
 With the aim of maximising reproducibility, the functions and data used to produce the figures in the main manuscript and this supplementary document are available after installing the ASOmodels package in R.
 <<>>=
 require(devtools)
-#install_github('ASOmodel',username='lykkep')
+install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
-The ASOmodels package defines and documents the following functions that are used in this document:
-\begin{enumerate}
-\item \texttt{Trel}
-\item \texttt{TrelNO}
-\item \texttt{Trelstoc}
-\item \texttt{plot.doseresponse}
-\item \texttt{EC50}
-\item \texttt{EC50NO}
-\item \texttt{EC50stoc}
-\item \texttt{diffASO}
-\item \texttt{pretty10expLP}
-\end{enumerate}
-
-\newpage
+The ASOmodels package defines and documents the following functions that are used in this document: \\
+~\\
+\begin{tabular}{l l l}
+\texttt{Trel} & \texttt{TrelNO} & \texttt{Trelstoc} \\
+\texttt{plot.doseresponse} & \texttt{EP} & \texttt{diffASO} \\
+\texttt{EC50NO} & \texttt{EC50stoc} & \texttt{EC50}
+\end{tabular}
 
 \tableofcontents
 
@@ -121,41 +116,75 @@ plot.doseresponse('kcleav',c(1,100,1000),
 \caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $\KdOT$, $\kOpT$, $\KdOTE$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table.}\label{fig::Etot}
 \end{figure}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S2}
-Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. We are interested in $\EC$ as a function of $\KdOT$. This is calculated through the ASOmodel-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
-<<>>=
-EC50(KdOT=0.1,param=parms)
+Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value and the efficacy. It is observed that the potency and efficacy varies for varying parameter values as shown in Supp. Fig.~\ref{fig:EP}.
+<<echo=F>>=
+EP <- function(value,par,param=parms){ #
+  param[par] <- value
+  Otseq <- 10^seq(-3,3,length=50)
+  Trelseq <- Trel(Otseq,param=param)
+  parms  <- coefficients(drm(Trelseq~Otseq,fct=LL.5()))
+  out <- c(1-parms[2],exp((parms[1]*log(parms[4])+
+          log(exp(log((2*(-parms[3]+parms[2]))/(
+            parms[2]-1))/parms[5])-1))/parms[1]) )
+  names(out) <- c('Eff','EC50')
+  out
+}
 @
-For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
-<<>>==
-D1_seq <- 10^seq(-3,3.2,by=0.25)
-ECseq <- sapply(D1_seq,EC50)
-FitPar <- lm(log10(ECseq) ~ log10(D1_seq) + I(log10(D1_seq)^2))
-@
-<<S31,echo=FALSE,fig=TRUE,width=4,height=3,include=FALSE>>=
-par(mar=c(4.5,4.5,1,1))
-plot(D1_seq,ECseq,log='xy',yaxt='n',type='l',xaxt='n',
-     xlab=expression(K[dOT]~'(nM)'),ylab=expression(EC[50]~'(nM)'))
-axis(2,at=c(2,20,200),labels=c(2,20,200),las=2)
-axis(1,at=10^pretty(log10(D1_seq)),
-     labels=pretty10expLP(10^pretty(log10(D1_seq)),drop.1=T),)
-Parfun <- function(D1){
-  tmp <- coefficients(FitPar) 
-  10^(tmp[1]+tmp[2]*log10(D1)+tmp[3]*log10(D1)^2)}
-lines(D1_seq,Parfun(D1_seq), col='red')
-f <- summary(FitPar)$fstatistic
-p <- pf(f[1],f[2],f[3],lower.tail=F)
-legend('top',legend=paste('p-value =',signif(p,2)),bty='n')
-legend('bottomright',c('model','fit'),col=c('black','red'),lwd=2,bty='n')
+%Efficacy,echo=F,fig=FALSE,width=7,height=8,include=FALSE
+<<echo=FALSE>>=
+# AF <- function(x){
+#   axis(1,at=10^pretty(log10(x)),labels=pretty10expLP(10^pretty(log10(x)),drop.1=T))
+# }
+# pdf('SuppFile1-Efficacy.pdf',width=7,height=9)
+# layout(matrix(1:18,6,3,byrow=F),heights=rep(c(0.77,1),3),widths=rep(1,3))
+# par(mgp=c(2.7,0.7,0),las=1,bty='l')
+# y1lab <- 'Efficacy'; y2lab <- expression(italic('EC')[50]~'[nM]')
+# value <- 10^seq(-2,2,by=0.25)
+# plotFUN <- function(x,dat,xlab1){
+#   par(mar=c(0.1,4,1,1))
+#   plot(x,dat[1,],log='x',type='b',ylab=y1lab,xaxt='n',ylim=c(0,1),pch=20)
+#   par(mar=c(4,4,0.1,1))
+#   plot(x,dat[2,],log='xy',xlab=xlab1,type='b',ylab=y2lab,xaxt='n',pch=20)
+#   AF(x)
+# }
+# #Etot
+# #Et <- sapply(value,EP,par='Et')
+# plotFUN(value,Et,expression(italic('E')[tot]~'[nM]'))
+# #alpha
+# #alpha <- sapply(10^seq(-4,0,by=0.25),EP,par='alpha')
+# plotFUN(10^seq(-4,0,by=0.25),alpha,expression(alpha))
+# #kcleav
+# #kcleav <- sapply(value,EP,par='kcleav')
+# plotFUN(value,kcleav,expression(italic('k')[OTE %->% OCE]~'[min'^-1*']'))
+# #vprod
+# #vprod <- sapply(value,EP,par='vprod')
+# plotFUN(value,vprod,expression(italic('v')[prod]~'[nM/min]'))
+# #kdegrad
+# #kdegrad <- sapply(value,EP,par='kdegrad')
+# plotFUN(value,kdegrad,xlab=expression(italic('k')[T %->% Ø]~'[min'^-1*']'))
+# #kOpT
+# #kOpT <- sapply(value,EP,par='kOpT')
+# plotFUN(value,kOpT,expression(italic('k')[O+T %->% OT]~'[nM'^-1*'min'^-1*']'))
+# #KdOTE
+# #KdOTE <- sapply(10^seq(-1,3,by=0.2),EP,par='KdOTE')
+# plotFUN(10^seq(-1,3,by=0.2),KdOTE,expression(italic('K')[dOTE]~'[nM]'))
+# #kOTpE
+# #kOTpE <- sapply(value,EP,par='kOTpE')
+# plotFUN(value,kOTpE,expression(italic('k')[OT +E %->%OTE]~'[nM'^-1*'min'^-1*']'))
+# #KdOT
+# #kdOT <- sapply(value,EP,par='KdOT')
+# plotFUN(value,kdOT,expression(italic('K')[dOT]~'[nM]'))
+# dev.off()
 @
 \begin{figure}[!h]
 \begin{Ncenter}
-\includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
+\includegraphics[width=\textwidth]{SuppFile1-Efficacy.pdf}
 \end{Ncenter}
-\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
+\caption{Efficacy and $\EC$ is plotted as functions of parameter values for $E_{\rm{tot}}$, $\KdOTE$, $\vp$, $\alpha$, $\kOpT$, $\kt$, $\vd$, $\kE$. }\label{fig:EP}
 \end{figure}
+
 
 
 
@@ -272,22 +301,59 @@ plot(lKOT,EC50_lKOT,log='x',ylab=expression(EC[50]~'(molecules)'),
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S5}
+ We are interested in $\EC$ as a function of $\KdOT$. This is calculated through the ASOmodel-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
+<<>>=
+EC50(KdOT=0.1,param=parms)
+@
+For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
+<<>>==
+D1_seq <- 10^seq(-3,3.2,by=0.25)
+ECseq <- sapply(D1_seq,EC50)
+FitPar <- lm(log10(ECseq) ~ log10(D1_seq) + I(log10(D1_seq)^2))
+@
+<<S31,echo=FALSE,fig=TRUE,width=4,height=3,include=FALSE>>=
+par(mar=c(4.5,4.5,1,1))
+plot(D1_seq,ECseq,log='xy',yaxt='n',type='l',xaxt='n',
+     xlab=expression(K[dOT]~'(nM)'),ylab=expression(EC[50]~'(nM)'))
+axis(2,at=c(2,20,200),labels=c(2,20,200),las=2)
+axis(1,at=10^pretty(log10(D1_seq)),
+     labels=pretty10expLP(10^pretty(log10(D1_seq)),drop.1=T),)
+Parfun <- function(D1){
+  tmp <- coefficients(FitPar) 
+  10^(tmp[1]+tmp[2]*log10(D1)+tmp[3]*log10(D1)^2)}
+lines(D1_seq,Parfun(D1_seq), col='red')
+f <- summary(FitPar)$fstatistic
+p <- pf(f[1],f[2],f[3],lower.tail=F)
+legend('top',legend=paste('p-value =',signif(p,2)),bty='n')
+legend('bottomright',c('model','fit'),col=c('black','red'),lwd=2,bty='n')
+@
 \begin{figure}[!h]
 \begin{Ncenter}
-\includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+\includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
 \end{Ncenter}
-\caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Supplementary Figure S6}
-\begin{figure}[!h]
-\begin{Ncenter}
-\includegraphics[width=\textwidth]{SuppFigS3.pdf}
-\end{Ncenter}
-\caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
-\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S6}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+% \end{Ncenter}
+% \caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+% \end{figure}
+% 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S7}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=\textwidth]{SuppFigS3.pdf}
+% \end{Ncenter}
+% \caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
+% \end{figure}
+
 
 \newpage
 \bibliography{ASOmodels}

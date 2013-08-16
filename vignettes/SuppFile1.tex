@@ -50,30 +50,25 @@
 \input{SuppFile1-concordance}
 \maketitle
 
-This document is the Supplementary Document for the manuscript entitled ``A kinetic model of enzyme recruiting oligonucleotides predicts an optimal affinity and explains why shorter and less affine oligonucleotides can be more potent" and it is a vignette for the R-package ASOmodels.
+This document is the Supplementary Document for the manuscript entitled ``A kinetic model explains why shorter and less
+affine enzyme-recruiting oligonucleotides can be
+more potent" and it is a vignette for the R-package ASOmodels.
 
 With the aim of maximising reproducibility, the functions and data used to produce the figures in the main manuscript and this supplementary document are available after installing the ASOmodels package in R.
 \begin{Schunk}
 \begin{Sinput}
 > require(devtools)
-> #install_github('ASOmodel',username='lykkep')
+> install_github('ASOmodel',username='lykkep')
 > require(ASOmodels)
 \end{Sinput}
 \end{Schunk}
-The ASOmodels package defines and documents the following functions that are used in this document:
-\begin{enumerate}
-\item \texttt{Trel}
-\item \texttt{TrelNO}
-\item \texttt{Trelstoc}
-\item \texttt{plot.doseresponse}
-\item \texttt{EC50}
-\item \texttt{EC50NO}
-\item \texttt{EC50stoc}
-\item \texttt{diffASO}
-\item \texttt{pretty10expLP}
-\end{enumerate}
-
-\newpage
+The ASOmodels package defines and documents the following functions that are used in this document: \\
+~\\
+\begin{tabular}{l l l}
+\texttt{Trel} & \texttt{TrelNO} & \texttt{Trelstoc} \\
+\texttt{plot.doseresponse} & \texttt{EP} & \texttt{diffASO} \\
+\texttt{EC50NO} & \texttt{EC50stoc} & \texttt{EC50}
+\end{tabular}
 
 \tableofcontents
 
@@ -100,33 +95,17 @@ $\Trel$ can be calculated for a range of different oligonucleotide concentration
 \caption{Dose-response curves for different values of $E_{t}$, $\alpha$, $\vp$, $\vd$, $\KdOT$, $\kOpT$, $\KdOTE$, $\kt$, and $\kE$ (top,left to bottom,right). Black lines correspond to the parameter values listed in Supplementary Table.}\label{fig::Etot}
 \end{figure}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S2}
-Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value. We are interested in $\EC$ as a function of $\KdOT$. This is calculated through the ASOmodel-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
-\begin{Schunk}
-\begin{Sinput}
-> EC50(KdOT=0.1,param=parms)
-\end{Sinput}
-\begin{Soutput}
-    EC50 
-1.218908 
-\end{Soutput}
-\end{Schunk}
-For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
-\begin{Schunk}
-\begin{Sinput}
-> D1_seq <- 10^seq(-3,3.2,by=0.25)
-> ECseq <- sapply(D1_seq,EC50)
-> FitPar <- lm(log10(ECseq) ~ log10(D1_seq) + I(log10(D1_seq)^2))
-\end{Sinput}
-\end{Schunk}
+Using the R-function \texttt{drm()} from the drc package (v2.3-0) a dose-response curve is fitted to $\Trel$ as a function of $O_t$ to obtain an $\EC$-value and the efficacy. It is observed that the potency and efficacy varies for varying parameter values as shown in Supp. Fig.~\ref{fig:EP}.
+%Efficacy,echo=F,fig=FALSE,width=7,height=8,include=FALSE
 \begin{figure}[!h]
 \begin{Ncenter}
-\includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
+\includegraphics[width=\textwidth]{SuppFile1-Efficacy.pdf}
 \end{Ncenter}
-\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
+\caption{Efficacy and $\EC$ is plotted as functions of parameter values for $E_{\rm{tot}}$, $\KdOTE$, $\vp$, $\alpha$, $\kOpT$, $\kt$, $\vd$, $\kE$. }\label{fig:EP}
 \end{figure}
+
 
 
 
@@ -224,22 +203,51 @@ Note that as in the deterministic case (see main manuscript) an optimal affinity
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Supplementary Figure S5}
+ We are interested in $\EC$ as a function of $\KdOT$. This is calculated through the ASOmodel-function \texttt{EC50()} that takes $\KdOT$ and the set of parameters as input:
+\begin{Schunk}
+\begin{Sinput}
+> EC50(KdOT=0.1,param=parms)
+\end{Sinput}
+\begin{Soutput}
+    EC50 
+1.218908 
+\end{Soutput}
+\end{Schunk}
+For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
+\begin{Schunk}
+\begin{Sinput}
+> D1_seq <- 10^seq(-3,3.2,by=0.25)
+> ECseq <- sapply(D1_seq,EC50)
+> FitPar <- lm(log10(ECseq) ~ log10(D1_seq) + I(log10(D1_seq)^2))
+\end{Sinput}
+\end{Schunk}
 \begin{figure}[!h]
 \begin{Ncenter}
-\includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+\includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
 \end{Ncenter}
-\caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Supplementary Figure S6}
-\begin{figure}[!h]
-\begin{Ncenter}
-\includegraphics[width=\textwidth]{SuppFigS3.pdf}
-\end{Ncenter}
-\caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
-\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S6}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+% \end{Ncenter}
+% \caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+% \end{figure}
+% 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S7}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=\textwidth]{SuppFigS3.pdf}
+% \end{Ncenter}
+% \caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
+% \end{figure}
+
 
 \newpage
 \bibliography{ASOmodels}
