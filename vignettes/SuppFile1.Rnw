@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatexmk
 \documentclass[a4paper,11pt]{article}
 
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 
 \usepackage{Temp_short}
 \usepackage[bottom]{footmisc}

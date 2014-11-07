@@ -1,6 +1,6 @@
 % !TEX TS-program = pdflatexmk
 \documentclass{article}
-\usepackage[utf8]{inputenc} 
+\usepackage[latin1]{inputenc} 
 
 \newenvironment{Ncenter}{%
   \setlength\topsep{-10pt}
