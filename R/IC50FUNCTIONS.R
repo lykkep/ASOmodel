@@ -17,11 +17,10 @@
 #' @export
 EC50 <- function(KdOT,param=parms){ #
   param['KdOT'] <- KdOT
-  Otseq <- 10^seq(-3,3,length=20)
+  Otseq <- 10^seq(-3,3,length=40)
   Trelseq <- Trel(Otseq,param=param)
   
-  fit <- drm(Trelseq~Otseq,fct=LL.4(fixed=c(NA,NA,100,NA)), control = drmc(constr=T,rmNA=T ),
-      lowerl = c(-Inf,0,0),upperl = c(Inf,99,Inf))
+  fit <- drm(Trelseq~Otseq,fct=LL.5())
   
   parms  <- coefficients(fit) # drm(Trelseq~Otseq,fct=LL.5())
 #   out <- exp((parms[1]*log(parms[4])+

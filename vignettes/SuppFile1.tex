@@ -5,7 +5,6 @@
 \usepackage[bottom]{footmisc}
 \usepackage{commath}
 \usepackage{caption} 
-\captionsetup[table]{skip=7pt}
 \setlength{\jot}{0.3cm}
 \allowdisplaybreaks[2]
 
@@ -207,3 +206,50 @@ Note that as in the deterministic case (see main manuscript) an optimal affinity
 \begin{Schunk}
 \begin{Sinput}
 > EC50(KdOT=0.1,param=parms)
+\end{Sinput}
+\begin{Soutput}
+    EC50 
+4.024097 
+\end{Soutput}
+\end{Schunk}
+For a range of $\KdOT$-values, the corresponding $\EC$-values can be calculated. These can be fitted to a parabola using the R-function \texttt{lm()}, see Supplementary Figure S2. 
+\begin{Schunk}
+\begin{Sinput}
+> D1_seq <- 10^seq(-3,3.2,by=0.25)
+> ECseq <- sapply(D1_seq,EC50)
+> FitPar <- lm(log10(ECseq) ~ log10(D1_seq) + I(log10(D1_seq)^2))
+\end{Sinput}
+\end{Schunk}
+\begin{figure}[!h]
+\begin{Ncenter}
+\includegraphics[width=0.6\textwidth]{SuppFile1-S31.pdf}
+\end{Ncenter}
+\caption{$\EC$ as a function of $\KdOT$ is fitted on a log-log scale to a parabola.}\label{fig::Optfit}
+\end{figure}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S6}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=0.65\textwidth]{SuppFig_PS.pdf}
+% \end{Ncenter}
+% \caption{The effect on $T_m$ of a phosphorothioate backbone was estimated using published data from Ref. \cite{Hashem:1998kf}.}\label{fig:figPS}
+% \end{figure}
+% 
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Supplementary Figure S7}
+% \begin{figure}[!h]
+% \begin{Ncenter}
+% \includegraphics[width=\textwidth]{SuppFigS3.pdf}
+% \end{Ncenter}
+% \caption{Measured melting temperature versus predicted melting temperature. There are clear correlations ($r > 0.92$, $P < 0.01$, Pearson's correlation) between predicted and measured $T_m$. Pedersen et al: 4 LNA-modified oligonucleotides targeting apolipoprotein B (this work), Stanton et al: 14 LNA-modified oligonucleotides targeting the glucocorticoid receptor \cite{Stanton:2012fu}. Frieden et al: 21 LNA-modified oligonucleotides targeting the luciferase firefly gene \cite{Frieden:2003er}. Melting curves were recorded with a Perkin Elmer spectrophotometer. Oligonucleotide and its complementary RNA, both at 1.5$\mu M$, were dissolved in buffer (20mM phosphate buffer, 100mM NaCl, 0.1nM EDTA, pH 7). Samples were denatured at $95^\circ$C for 3min and slowly cooled to $20^\circ$C prior to measurements. Melting curves were recorded at 260nm using a heating rate of 1$^\circ$C/min, a slit of 2nm and a response of 0.2s. From this, $T_m$-values were obtained from the maxima of the first derivatives of the melting curves.}\label{fig:figTm}
+% \end{figure}
+
+
+\newpage
+\bibliography{ASOmodels}
+
+
+\end{document}

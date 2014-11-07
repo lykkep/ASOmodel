@@ -1,0 +1,3323 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  7 NOV 2014 10:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Vignette2.tex
+(./Vignette2.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@indent=\dimen106
+\caption@parindent=\dimen107
+\caption@hangindent=\dimen108
+)
+\c@ContinuedFloat=\count87
+)
+(./Sweave.sty
+Package: Sweave 
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen109
+\Gin@req@width=\dimen110
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count89
+\FV@InFile=\read1
+\FV@TabBox=\box26
+\c@FancyVerbLine=\count90
+\FV@StepNumber=\count91
+\FV@OutFile=\write3
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ae/ae.sty
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))) (./Vignette2.aux)
+\openout1 = `Vignette2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen111
+\scratchbox=\box27
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen112
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks18
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(./Vignette2-concordance.tex)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 39.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 44.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+! Undefined control sequence.
+<argument> > #install_github('
+                              ASOmodel',username='lykkep')
+l.46 ...stall_github('ASOmodel',username='lykkep')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > #install_github('ASOmodel'
+                                       ,username='lykkep')
+l.46 ...stall_github('ASOmodel',username='lykkep')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > #install_github('ASOmodel',username='
+                                                  lykkep')
+l.46 ...stall_github('ASOmodel',username='lykkep')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ..._github('ASOmodel',username='lykkep'
+                                                  )
+l.46 ...stall_github('ASOmodel',username='lykkep')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['
+                                vprod']/parms['kdegrad'], OT=0, OTE=0,
+l.61 ...ms['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['vprod'
+                                      ]/parms['kdegrad'], OT=0, OTE=0,
+l.61 ...ms['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['vprod']/parms['
+                                               kdegrad'], OT=0, OTE=0,
+l.61 ...ms['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...- c(T=parms['vprod']/parms['kdegrad'
+                                                  ], OT=0, OTE=0,
+l.61 ...ms['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           E=parms['
+                                Et'], O=0.1, OCE=0, OC=0)
+l.62 ...        E=parms['Et'], O=0.1, OCE=0, OC=0)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           E=parms['Et'
+                                   ], O=0.1, OCE=0, OC=0)
+l.62 ...        E=parms['Et'], O=0.1, OCE=0, OC=0)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 71.
+! Undefined control sequence.
+<argument> > uSS <- c('
+                       nM','pM','pM','nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM'
+                          ,'pM','pM','nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','
+                            pM','pM','nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM'
+                               ,'pM','nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','
+                                 pM','nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','pM'
+                                    ,'nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','pM','
+                                      nM','pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','pM','nM'
+                                         ,'pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','pM','nM','
+                                           pM')
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('nM','pM','pM','nM','pM'
+                                              )
+l.78 > uSS <- c('nM','pM','pM','nM','pM')
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('
+                      T','OT','OTE','E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T'
+                        ,'OT','OTE','E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','
+                          OT','OTE','E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT'
+                             ,'OTE','E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','
+                               OTE','E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE'
+                                   ,'E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','
+                                     E','O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E'
+                                       ,'O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E','
+                                         O')
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E','O'
+                                           )
+l.79 > labSS=c('T','OT','OTE','E','O')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.80 ...c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.80 ...c(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lim=c(0,1),xlim=c(0,xtime+30),type='
+                                                  n',xaxt='n',
+l.82 ...0,1),xlim=c(0,xtime+30),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...m=c(0,1),xlim=c(0,xtime+30),type='n'
+                                                  ,xaxt='n',
+l.82 ...0,1),xlim=c(0,xtime+30),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...),xlim=c(0,xtime+30),type='n',xaxt='
+                                                  n',
+l.82 ...0,1),xlim=c(0,xtime+30),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlim=c(0,xtime+30),type='n',xaxt='n'
+                                                  ,
+l.82 ...0,1),xlim=c(0,xtime+30),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='
+                        n',ylab='relative concentrations',xlab='minutes')
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='n'
+                          ,ylab='relative concentrations',xlab='minutes')
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='n',ylab='
+                                 relative concentrations',xlab='minutes')
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...t='n',ylab='relative concentrations'
+                                                  ,xlab='minutes')
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lab='relative concentrations',xlab='
+                                                  minutes')
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ative concentrations',xlab='minutes'
+                                                  )
+l.83 ...='relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('
+                                       min','max'),las=1)
+l.84 ...is(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min'
+                                           ,'max'),las=1)
+l.84 ...is(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min','
+                                             max'),las=1)
+l.84 ...is(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min','max'
+                                                 ),las=1)
+l.84 ...is(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      label=c(seq(0,xtime,by=10),'
+                                              '))
+l.86 +      label=c(seq(0,xtime,by=10),''))
+                                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      label=c(seq(0,xtime,by=10),''
+                                               ))
+l.86 +      label=c(seq(0,xtime,by=10),''))
+                                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(1,at=xtime+20,label='
+                                       steady-\nstate',mgp=c(0,1.6,0))
+l.87 ...+20,label='steady-\nstate',mgp=c(0,1.6,0))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...1,at=xtime+20,label='steady-\nstate'
+                                                  ,mgp=c(0,1.6,0))
+l.87 ...+20,label='steady-\nstate',mgp=c(0,1.6,0))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...1),1], solASO[1:(xtime+1),i], xaxt='
+                                                  n',
+l.90 ...me+1),1], solASO[1:(xtime+1),i], xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...,1], solASO[1:(xtime+1),i], xaxt='n'
+                                                  ,
+l.90 ...me+1),1], solASO[1:(xtime+1),i], xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        yaxt='
+                          n',ylim=range(solASO[,i]),col=colVAR[i-1],
+l.91 ...n',ylim=range(solASO[,i]),col=colVAR[i-1],
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        yaxt='n'
+                            ,ylim=range(solASO[,i]),col=colVAR[i-1],
+l.91 ...n',ylim=range(solASO[,i]),col=colVAR[i-1],
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        type='
+                          l',ylab=NA,xlab=NA,xlim=c(0,xtime+30))
+l.92 ...pe='l',ylab=NA,xlab=NA,xlim=c(0,xtime+30))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        type='l'
+                            ,ylab=NA,xlab=NA,xlim=c(0,xtime+30))
+l.92 ...pe='l',ylab=NA,xlab=NA,xlim=c(0,xtime+30))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +   y <- diff(par('
+                              usr')[3:4])*ySS[i-1]+par('usr')[3]
+l.94 ...ff(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +   y <- diff(par('usr'
+                                  )[3:4])*ySS[i-1]+par('usr')[3]
+l.94 ...ff(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...diff(par('usr')[3:4])*ySS[i-1]+par('
+                                                  usr')[3]
+l.94 ...ff(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...(par('usr')[3:4])*ySS[i-1]+par('usr'
+                                                  )[3]
+l.94 ...ff(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figa.pdf, id=14, 289.08pt x 289.08pt>
+File: Vignette2-Figa.pdf Graphic file (type pdf)
+ <use Vignette2-Figa.pdf>
+Package pdftex.def Info: Vignette2-Figa.pdf used on input line 102.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['
+                                vprod']/parms['kdegrad'], OT=0, OTE=0,
+l.112 ...s['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['vprod'
+                                      ]/parms['kdegrad'], OT=0, OTE=0,
+l.112 ...s['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > init <- c(T=parms['vprod']/parms['
+                                               kdegrad'], OT=0, OTE=0,
+l.112 ...s['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...- c(T=parms['vprod']/parms['kdegrad'
+                                                  ], OT=0, OTE=0,
+l.112 ...s['vprod']/parms['kdegrad'], OT=0, OTE=0,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           E=parms['
+                                Et'], O=100, OCE=0, OC=0)
+l.113 ...       E=parms['Et'], O=100, OCE=0, OC=0)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           E=parms['Et'
+                                   ], O=100, OCE=0, OC=0)
+l.113 ...       E=parms['Et'], O=100, OCE=0, OC=0)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2 <./Vignette2-Figa.pdf>]
+! Undefined control sequence.
+<argument> > uSS <- c('
+                       pM','nM','pM',rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM'
+                          ,'nM','pM',rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','
+                            nM','pM',rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','nM'
+                               ,'pM',rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','nM','
+                                 pM',rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','nM','pM'
+                                    ,rep('nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','nM','pM',rep('
+                                          nM',2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > uSS <- c('pM','nM','pM',rep('nM'
+                                             ,2))
+l.123 > uSS <- c('pM','nM','pM',rep('nM',2))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('
+                      T','OT','OTE','E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T'
+                        ,'OT','OTE','E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','
+                          OT','OTE','E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT'
+                             ,'OTE','E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','
+                               OTE','E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE'
+                                   ,'E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','
+                                     E','O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E'
+                                       ,'O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E','
+                                         O')
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > labSS=c('T','OT','OTE','E','O'
+                                           )
+l.124 > labSS=c('T','OT','OTE','E','O')
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.125 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.125 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lim=c(0,1),xlim=c(0,xtime+25),type='
+                                                  n',xaxt='n',
+l.127 ...,1),xlim=c(0,xtime+25),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...m=c(0,1),xlim=c(0,xtime+25),type='n'
+                                                  ,xaxt='n',
+l.127 ...,1),xlim=c(0,xtime+25),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...),xlim=c(0,xtime+25),type='n',xaxt='
+                                                  n',
+l.127 ...,1),xlim=c(0,xtime+25),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlim=c(0,xtime+25),type='n',xaxt='n'
+                                                  ,
+l.127 ...,1),xlim=c(0,xtime+25),type='n',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='
+                        n',ylab='relative concentrations',xlab='minutes')
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='n'
+                          ,ylab='relative concentrations',xlab='minutes')
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      yaxt='n',ylab='
+                                 relative concentrations',xlab='minutes')
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...t='n',ylab='relative concentrations'
+                                                  ,xlab='minutes')
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lab='relative concentrations',xlab='
+                                                  minutes')
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ative concentrations',xlab='minutes'
+                                                  )
+l.128 ...'relative concentrations',xlab='minutes')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('
+                                       min','max'),las=1)
+l.129 ...s(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min'
+                                           ,'max'),las=1)
+l.129 ...s(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min','
+                                             max'),las=1)
+l.129 ...s(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(2,at=c(0,1),label=c('min','max'
+                                                 ),las=1)
+l.129 ...s(2,at=c(0,1),label=c('min','max'),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      label=c(seq(0,xtime,by=10),'
+                                              '))
+l.131 +      label=c(seq(0,xtime,by=10),''))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      label=c(seq(0,xtime,by=10),''
+                                               ))
+l.131 +      label=c(seq(0,xtime,by=10),''))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(1,at=xtime+15,label='
+                                       steady-\nstate',mgp=c(0,1.6,0))
+l.132 ...15,label='steady-\nstate',mgp=c(0,1.6,0))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...1,at=xtime+15,label='steady-\nstate'
+                                                  ,mgp=c(0,1.6,0))
+l.132 ...15,label='steady-\nstate',mgp=c(0,1.6,0))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...1),1], solASO[1:(xtime+1),i], xaxt='
+                                                  n',
+l.135 ...e+1),1], solASO[1:(xtime+1),i], xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...,1], solASO[1:(xtime+1),i], xaxt='n'
+                                                  ,
+l.135 ...e+1),1], solASO[1:(xtime+1),i], xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        yaxt='
+                          n',ylim=range(solASO[,i]),col=colVAR[i-1],
+l.136 ...',ylim=range(solASO[,i]),col=colVAR[i-1],
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        yaxt='n'
+                            ,ylim=range(solASO[,i]),col=colVAR[i-1],
+l.136 ...',ylim=range(solASO[,i]),col=colVAR[i-1],
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        type='
+                          l',ylab=NA,xlab=NA,xlim=c(0,xtime+25))
+l.137 ...e='l',ylab=NA,xlab=NA,xlim=c(0,xtime+25))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        type='l'
+                            ,ylab=NA,xlab=NA,xlim=c(0,xtime+25))
+l.137 ...e='l',ylab=NA,xlab=NA,xlim=c(0,xtime+25))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +   y <- diff(par('
+                              usr')[3:4])*ySS[i-1]+par('usr')[3]
+l.139 ...f(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +   y <- diff(par('usr'
+                                  )[3:4])*ySS[i-1]+par('usr')[3]
+l.139 ...f(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...diff(par('usr')[3:4])*ySS[i-1]+par('
+                                                  usr')[3]
+l.139 ...f(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...(par('usr')[3:4])*ySS[i-1]+par('usr'
+                                                  )[3]
+l.139 ...f(par('usr')[3:4])*ySS[i-1]+par('usr')[3]
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figb.pdf, id=24, 289.08pt x 289.08pt>
+File: Vignette2-Figb.pdf Graphic file (type pdf)
+ <use Vignette2-Figb.pdf>
+Package pdftex.def Info: Vignette2-Figb.pdf used on input line 147.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+[3 <./Vignette2-Figb.pdf>]
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.158 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.158 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > curve(Trel,1E-3,5E2,log='
+                                      x', lwd=2,ylim=c(0,1),
+l.160 ...Trel,1E-3,5E2,log='x', lwd=2,ylim=c(0,1),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > curve(Trel,1E-3,5E2,log='x'
+                                        , lwd=2,ylim=c(0,1),
+l.160 ...Trel,1E-3,5E2,log='x', lwd=2,ylim=c(0,1),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       ylab=expression(T[rel]),xaxt='
+                                                 n',
+l.161 +       ylab=expression(T[rel]),xaxt='n',
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...    ylab=expression(T[rel]),xaxt='n'
+                                                  ,
+l.161 +       ylab=expression(T[rel]),xaxt='n',
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       xlab='
+                         Total oligonucleotide conc (nM)')
+l.162 ...  xlab='Total oligonucleotide conc (nM)')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ab='Total oligonucleotide conc (nM)'
+                                                  )
+l.162 ...  xlab='Total oligonucleotide conc (nM)')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > abline(v=EC50(parms['
+                                  KdOT']),lty=2) #EC50
+l.164 > abline(v=EC50(parms['KdOT']),lty=2) #EC50
+                                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > abline(v=EC50(parms['KdOT'
+                                       ]),lty=2) #EC50
+l.164 > abline(v=EC50(parms['KdOT']),lty=2) #EC50
+                                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(1,at=EC50(parms['
+                                   KdOT']),label=expression(EC[50]))
+l.167 ...(parms['KdOT']),label=expression(EC[50]))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > axis(1,at=EC50(parms['KdOT'
+                                        ]),label=expression(EC[50]))
+l.167 ...(parms['KdOT']),label=expression(EC[50]))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...t=Trel(1E6),label=expression(T[rel*'
+                                                  ,'*min]),las=1)
+l.168 ...),label=expression(T[rel*','*min]),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...Trel(1E6),label=expression(T[rel*','
+                                                  *min]),las=1)
+l.168 ...),label=expression(T[rel*','*min]),las=1)
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figc.pdf, id=34, 289.08pt x 289.08pt>
+File: Vignette2-Figc.pdf Graphic file (type pdf)
+ <use Vignette2-Figc.pdf>
+Package pdftex.def Info: Vignette2-Figc.pdf used on input line 173.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+! Undefined control sequence.
+<argument> > parmsNO <- c(parms,kC=parms['
+                                          kOpT']*parms['KdOT']/parms['alpha'])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > parmsNO <- c(parms,kC=parms['kOpT'
+                                               ]*parms['KdOT']/parms['alpha'])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... <- c(parms,kC=parms['kOpT']*parms['
+                                                  KdOT']/parms['alpha'])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...(parms,kC=parms['kOpT']*parms['KdOT'
+                                                  ]/parms['alpha'])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...=parms['kOpT']*parms['KdOT']/parms['
+                                                  alpha'])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...['kOpT']*parms['KdOT']/parms['alpha'
+                                                  ])
+l.190 ...rms['kOpT']*parms['KdOT']/parms['alpha'])
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > names(parmsNO)[length(parmsNO)] <- '
+                                                 kC'
+l.191 > names(parmsNO)[length(parmsNO)] <- 'kC'
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...es(parmsNO)[length(parmsNO)] <- 'kC'
+                                                  
+l.191 > names(parmsNO)[length(parmsNO)] <- 'kC'
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4 <./Vignette2-Figc.pdf>]
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.198 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.198 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > plot(D1_seq,ECfit,log='
+                                    xy',yaxt='n',type='l',xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > plot(D1_seq,ECfit,log='xy'
+                                       ,yaxt='n',type='l',xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > plot(D1_seq,ECfit,log='xy',yaxt='
+                                              n',type='l',xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > plot(D1_seq,ECfit,log='xy',yaxt='n'
+                                                ,type='l',xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...1_seq,ECfit,log='xy',yaxt='n',type='
+                                                  l',xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...seq,ECfit,log='xy',yaxt='n',type='l'
+                                                  ,xaxt='n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...it,log='xy',yaxt='n',type='l',xaxt='
+                                                  n',
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...,log='xy',yaxt='n',type='l',xaxt='n'
+                                                  ,
+l.200 ...Cfit,log='xy',yaxt='n',type='l',xaxt='n',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression(K[dOT]~'
+                                          (nM)'),
+l.201 +      xlab=expression(K[dOT]~'(nM)'),
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression(K[dOT]~'(nM)'
+                                               ),
+l.201 +      xlab=expression(K[dOT]~'(nM)'),
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab=expression(EC[50]~'
+                                          (nM)'))
+l.202 +      ylab=expression(EC[50]~'(nM)'))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab=expression(EC[50]~'(nM)'
+                                               ))
+l.202 +      ylab=expression(EC[50]~'(nM)'))
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('
+                     topleft',c('Coupling','No coupling'),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('topleft'
+                             ,c('Coupling','No coupling'),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('topleft',c('
+                                 Coupling','No coupling'),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('topleft',c('Coupling'
+                                          ,'No coupling'),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('topleft',c('Coupling','
+                                            No coupling'),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...'topleft',c('Coupling','No coupling'
+                                                  ),lty=c(1,2),bty='n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ing','No coupling'),lty=c(1,2),bty='
+                                                  n')
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...g','No coupling'),lty=c(1,2),bty='n'
+                                                  )
+l.207 ...pling','No coupling'),lty=c(1,2),bty='n')
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figd.pdf, id=44, 289.08pt x 289.08pt>
+File: Vignette2-Figd.pdf Graphic file (type pdf)
+ <use Vignette2-Figd.pdf>
+Package pdftex.def Info: Vignette2-Figd.pdf used on input line 212.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+! Undefined control sequence.
+<argument> > colL <- c('
+                        red','orange','darkgreen','','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > colL <- c('red'
+                            ,'orange','darkgreen','','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > colL <- c('red','
+                              orange','darkgreen','','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > colL <- c('red','orange'
+                                     ,'darkgreen','','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > colL <- c('red','orange','
+                                       darkgreen','','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > colL <- c('red','orange','darkgreen'
+                                                 ,'','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lL <- c('red','orange','darkgreen','
+                                                  ','darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...L <- c('red','orange','darkgreen',''
+                                                  ,'darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...<- c('red','orange','darkgreen','','
+                                                  darkblue','',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...','orange','darkgreen','','darkblue'
+                                                  ,'',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...'orange','darkgreen','','darkblue','
+                                                  ',
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...orange','darkgreen','','darkblue',''
+                                                  ,
+l.226 ...d','orange','darkgreen','','darkblue','',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           '
+                        purple','','black')
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           'purple'
+                               ,'','black')
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           'purple','
+                                 ','black')
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           'purple',''
+                                  ,'black')
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           'purple','','
+                                    black')
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +           'purple','','black'
+                                          )
+l.227 +           'purple','','black')
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[5 <./Vignette2-Figd.pdf>]
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.232 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.232 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rfun(x),min(Fx),max(Fx), lwd=1,col='
+                                                  grey',ylim=c(0,110),
+l.246 ...,max(Fx), lwd=1,col='grey',ylim=c(0,110),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...x),min(Fx),max(Fx), lwd=1,col='grey'
+                                                  ,ylim=c(0,110),
+l.246 ...,max(Fx), lwd=1,col='grey',ylim=c(0,110),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab='
+                        activity (% of control)',
+l.247 +      ylab='activity (% of control)',
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab='activity (% of control)'
+                                                ,
+l.247 +      ylab='activity (% of control)',
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression('
+                                   predicted'~T[m]~'('*degree*'C)'))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression('predicted'
+                                             ~T[m]~'('*degree*'C)'))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...  xlab=expression('predicted'~T[m]~'
+                                                  ('*degree*'C)'))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlab=expression('predicted'~T[m]~'('
+                                                  *degree*'C)'))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ession('predicted'~T[m]~'('*degree*'
+                                                  C)'))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ion('predicted'~T[m]~'('*degree*'C)'
+                                                  ))
+l.248 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('
+                              usr')[1:2])/2+par('usr')[1],100,
+l.249 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr'
+                                  )[1:2])/2+par('usr')[1],100,
+l.249 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr')[1:2])/2+par('
+                                                 usr')[1],100,
+l.249 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...nd(diff(par('usr')[1:2])/2+par('usr'
+                                                  )[1],100,
+l.249 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('
+                       Luciferase',paste('p =',FitF$p),FitF$legend),
+l.250 ...ferase',paste('p =',FitF$p),FitF$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('Luciferase'
+                                  ,paste('p =',FitF$p),FitF$legend),
+l.250 ...ferase',paste('p =',FitF$p),FitF$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('Luciferase',paste('
+                                          p =',FitF$p),FitF$legend),
+l.250 ...ferase',paste('p =',FitF$p),FitF$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('Luciferase',paste('p ='
+                                              ,FitF$p),FitF$legend),
+l.250 ...ferase',paste('p =',FitF$p),FitF$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='
+                         n',cex=1.1,yjust=0.4,xjust=0.5  )
+l.251 ...   bty='n',cex=1.1,yjust=0.4,xjust=0.5  )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='n'
+                           ,cex=1.1,yjust=0.4,xjust=0.5  )
+l.251 ...   bty='n',cex=1.1,yjust=0.4,xjust=0.5  )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Fige.pdf, id=55, 289.08pt x 289.08pt>
+File: Vignette2-Fige.pdf Graphic file (type pdf)
+ <use Vignette2-Fige.pdf>
+Package pdftex.def Info: Vignette2-Fige.pdf used on input line 257.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+[6 <./Vignette2-Fige.pdf>]
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.269 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.269 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rfun(x),min(Sx),max(Sx), lwd=1,col='
+                                                  grey',,ylim=c(0,110),
+l.274 ...max(Sx), lwd=1,col='grey',,ylim=c(0,110),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...x),min(Sx),max(Sx), lwd=1,col='grey'
+                                                  ,,ylim=c(0,110),
+l.274 ...max(Sx), lwd=1,col='grey',,ylim=c(0,110),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab='
+                        mRNA (% of control)',
+l.275 +      ylab='mRNA (% of control)',
+                                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylab='mRNA (% of control)'
+                                            ,
+l.275 +      ylab='mRNA (% of control)',
+                                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression('
+                                   predicted'~T[m]~'('*degree*'C)'))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      xlab=expression('predicted'
+                                             ~T[m]~'('*degree*'C)'))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...  xlab=expression('predicted'~T[m]~'
+                                                  ('*degree*'C)'))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlab=expression('predicted'~T[m]~'('
+                                                  *degree*'C)'))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ession('predicted'~T[m]~'('*degree*'
+                                                  C)'))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ion('predicted'~T[m]~'('*degree*'C)'
+                                                  ))
+l.276 ...ession('predicted'~T[m]~'('*degree*'C)'))
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('
+                     bottomright',as.character(sort(unique(OLength))),
+l.278 ...ght',as.character(sort(unique(OLength))),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend('bottomright'
+                                 ,as.character(sort(unique(OLength))),
+l.278 ...ght',as.character(sort(unique(OLength))),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...=colL[sort(unique(OLength))-11],bg='
+                                                  white',
+l.279 ...olL[sort(unique(OLength))-11],bg='white',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...sort(unique(OLength))-11],bg='white'
+                                                  ,
+l.279 ...olL[sort(unique(OLength))-11],bg='white',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        horiz=T,bty='
+                                 n',cex=1.1)
+l.280 +        horiz=T,bty='n',cex=1.1)
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        horiz=T,bty='n'
+                                   ,cex=1.1)
+l.280 +        horiz=T,bty='n',cex=1.1)
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('
+                              usr')[1:2])/2+par('usr')[1],100,
+l.281 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr'
+                                  )[1:2])/2+par('usr')[1],100,
+l.281 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr')[1:2])/2+par('
+                                                 usr')[1],100,
+l.281 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...nd(diff(par('usr')[1:2])/2+par('usr'
+                                                  )[1],100,
+l.281 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('
+                       GR',paste('p =',FitS$p),FitS$legend),
+l.282 ... c('GR',paste('p =',FitS$p),FitS$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('GR'
+                          ,paste('p =',FitS$p),FitS$legend),
+l.282 ... c('GR',paste('p =',FitS$p),FitS$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('GR',paste('
+                                  p =',FitS$p),FitS$legend),
+l.282 ... c('GR',paste('p =',FitS$p),FitS$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c('GR',paste('p ='
+                                      ,FitS$p),FitS$legend),
+l.282 ... c('GR',paste('p =',FitS$p),FitS$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='
+                         n',cex=1.1,yjust=0.4,xjust=0.5  )
+l.283 ...   bty='n',cex=1.1,yjust=0.4,xjust=0.5  )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='n'
+                           ,cex=1.1,yjust=0.4,xjust=0.5  )
+l.283 ...   bty='n',cex=1.1,yjust=0.4,xjust=0.5  )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figf.pdf, id=65, 289.08pt x 289.08pt>
+File: Vignette2-Figf.pdf Graphic file (type pdf)
+ <use Vignette2-Figf.pdf>
+Package pdftex.def Info: Vignette2-Figf.pdf used on input line 288.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.300 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.300 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7 <./Vignette2-Figf.pdf>]
+! Undefined control sequence.
+<argument> ...rfun(x),min(Px),max(Px), lwd=1,col='
+                                                  grey',
+l.305 ...fun(x),min(Px),max(Px), lwd=1,col='grey',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...x),min(Px),max(Px), lwd=1,col='grey'
+                                                  ,
+l.305 ...fun(x),min(Px),max(Px), lwd=1,col='grey',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       xlab=expression('
+                                    predicted'~T[m]~'('*degree*'C)'),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       xlab=expression('predicted'
+                                              ~T[m]~'('*degree*'C)'),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...  xlab=expression('predicted'~T[m]~'
+                                                  ('*degree*'C)'),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlab=expression('predicted'~T[m]~'('
+                                                  *degree*'C)'),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ession('predicted'~T[m]~'('*degree*'
+                                                  C)'),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ion('predicted'~T[m]~'('*degree*'C)'
+                                                  ),
+l.306 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylim=c(0,110),ylab='
+                                      mRNA (% of control)' )
+l.307 ...lim=c(0,110),ylab='mRNA (% of control)' )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...=c(0,110),ylab='mRNA (% of control)'
+                                                   )
+l.307 ...lim=c(0,110),ylab='mRNA (% of control)' )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('
+                              usr')[1:2])/2+par('usr')[1],100,
+l.309 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr'
+                                  )[1:2])/2+par('usr')[1],100,
+l.309 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr')[1:2])/2+par('
+                                                 usr')[1],100,
+l.309 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...nd(diff(par('usr')[1:2])/2+par('usr'
+                                                  )[1],100,
+l.309 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('
+                                  APOB ('*O[t]=='1nM)'),paste('p =',FitP$p),...
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('APOB ('
+                                         *O[t]=='1nM)'),paste('p =',FitP$p),...
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('APOB ('*O[t]=='
+                                                 1nM)'),paste('p =',FitP$p),...
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...  c(expression('APOB ('*O[t]=='1nM)'
+                                                  ),paste('p =',FitP$p),FitP...
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ssion('APOB ('*O[t]=='1nM)'),paste('
+                                                  p =',FitP$p),FitP$legend),
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...n('APOB ('*O[t]=='1nM)'),paste('p ='
+                                                  ,FitP$p),FitP$legend),
+l.310 ...'1nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='
+                         n',cex=1.1,yjust=0.4,xjust=0.5 )
+l.311 ...    bty='n',cex=1.1,yjust=0.4,xjust=0.5 )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='n'
+                           ,cex=1.1,yjust=0.4,xjust=0.5 )
+l.311 ...    bty='n',cex=1.1,yjust=0.4,xjust=0.5 )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Vignette2-Figg.pdf, id=76, 289.08pt x 289.08pt>
+File: Vignette2-Figg.pdf Graphic file (type pdf)
+ <use Vignette2-Figg.pdf>
+Package pdftex.def Info: Vignette2-Figg.pdf used on input line 316.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='
+                                             n',mgp=c(2,0.7,0),
+l.328 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > par(mar=c(3.2,3.4,0.1,0.1),bty='n'
+                                               ,mgp=c(2,0.7,0),
+l.328 ...(3.2,3.4,0.1,0.1),bty='n',mgp=c(2,0.7,0),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rfun(x),min(Px),max(Px), lwd=1,col='
+                                                  grey',
+l.333 ...fun(x),min(Px),max(Px), lwd=1,col='grey',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...x),min(Px),max(Px), lwd=1,col='grey'
+                                                  ,
+l.333 ...fun(x),min(Px),max(Px), lwd=1,col='grey',
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       xlab=expression('
+                                    predicted'~T[m]~'('*degree*'C)'),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +       xlab=expression('predicted'
+                                              ~T[m]~'('*degree*'C)'),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...  xlab=expression('predicted'~T[m]~'
+                                                  ('*degree*'C)'),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xlab=expression('predicted'~T[m]~'('
+                                                  *degree*'C)'),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ession('predicted'~T[m]~'('*degree*'
+                                                  C)'),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ion('predicted'~T[m]~'('*degree*'C)'
+                                                  ),
+l.334 ...ession('predicted'~T[m]~'('*degree*'C)'),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +      ylim=c(0,110),ylab='
+                                      mRNA (% of control)' )
+l.335 ...lim=c(0,110),ylab='mRNA (% of control)' )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...=c(0,110),ylab='mRNA (% of control)'
+                                                   )
+l.335 ...lim=c(0,110),ylab='mRNA (% of control)' )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('
+                              usr')[1:2])/2+par('usr')[1],100,
+l.337 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr'
+                                  )[1:2])/2+par('usr')[1],100,
+l.337 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> > legend(diff(par('usr')[1:2])/2+par('
+                                                 usr')[1],100,
+l.337 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...nd(diff(par('usr')[1:2])/2+par('usr'
+                                                  )[1],100,
+l.337 ...iff(par('usr')[1:2])/2+par('usr')[1],100,
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('
+                                  APOB ('*O[t]=='25nM)'),paste('p =',FitP$p)...
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('APOB ('
+                                         *O[t]=='25nM)'),paste('p =',FitP$p)...
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        c(expression('APOB ('*O[t]=='
+                                                 25nM)'),paste('p =',FitP$p)...
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... c(expression('APOB ('*O[t]=='25nM)'
+                                                  ),paste('p =',FitP$p),FitP...
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...sion('APOB ('*O[t]=='25nM)'),paste('
+                                                  p =',FitP$p),FitP$legend),
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...('APOB ('*O[t]=='25nM)'),paste('p ='
+                                                  ,FitP$p),FitP$legend),
+l.338 ...25nM)'),paste('p =',FitP$p),FitP$legend),
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='
+                         n',cex=1.1,yjust=0.4,xjust=0.5 )
+l.339 ...    bty='n',cex=1.1,yjust=0.4,xjust=0.5 )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> +        bty='n'
+                           ,cex=1.1,yjust=0.4,xjust=0.5 )
+l.339 ...    bty='n',cex=1.1,yjust=0.4,xjust=0.5 )
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8 <./Vignette2-Figg.pdf>] <Vignette2-Figh.pdf, id=86, 289.08pt x 289.08pt>
+File: Vignette2-Figh.pdf Graphic file (type pdf)
+
+<use Vignette2-Figh.pdf>
+Package pdftex.def Info: Vignette2-Figh.pdf used on input line 344.
+(pdftex.def)             Requested size: 172.5pt x 172.49655pt.
+ [9 <./Vignette2-Figh.pdf>] (./Vignette2.aux) ) 
+Here is how much of TeX's memory you used:
+ 3352 strings out of 493488
+ 52142 string characters out of 3141326
+ 97843 words of memory out of 3000000
+ 6586 multiletter control sequences out of 15000+200000
+ 23933 words of font info for 55 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 37i,6n,38p,459b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Vignette2.pdf (9 pages, 173464 bytes).
+PDF statistics:
+ 126 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+

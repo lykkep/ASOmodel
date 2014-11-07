@@ -5,7 +5,6 @@
 \usepackage[bottom]{footmisc}
 \usepackage{commath}
 \usepackage{caption} 
-\captionsetup[table]{skip=7pt}
 \setlength{\jot}{0.3cm}
 \allowdisplaybreaks[2]
 
