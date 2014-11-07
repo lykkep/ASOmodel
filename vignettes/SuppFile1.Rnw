@@ -57,7 +57,7 @@ more potent" and it is a vignette for the R-package ASOmodels.
 With the aim of maximising reproducibility, the functions and data used to produce the figures in the main manuscript and this supplementary document are available after installing the ASOmodels package in R.
 <<>>=
 require(devtools)
-#install_github('ASOmodel',username='lykkep')
+install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
 The ASOmodels package defines and documents the following functions that are used in this document: \\

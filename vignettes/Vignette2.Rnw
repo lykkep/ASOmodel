@@ -41,7 +41,7 @@ affine enzyme-recruiting oligonucleotides can be
 more potent". The R-functions from the ASOmodels package are used.
 <<echo=TRUE>>=
 require(devtools)
-#install_github('ASOmodel',username='lykkep')
+install_github('ASOmodel',username='lykkep')
 require(ASOmodels)
 @
 
