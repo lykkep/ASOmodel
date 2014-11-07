@@ -167,7 +167,7 @@ axis(2,at=Trel(1E6),label=expression(T[rel*','*min]),las=1)
 \subsection*{Figure 2d: An optimal affinity}
 For a range of affinities \texttt{D1\_seq} the $\EC$-values are calculated by use of the R-function \texttt{EC50()} from the ASOmodels package:
 <<echo=TRUE>>=
-D1_seq <- 10^seq(-3,3.2,by=0.25)
+D1_seq <- 10^seq(-3,3,by=0.25)
 ECfit <- sapply(D1_seq,EC50)
 @
 When there is no coupling between the off-rates $\kmo$ and $\kD$ then the value of $\kD$ is set in the param vector as the entry \texttt{'kC'}:

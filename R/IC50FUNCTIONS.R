@@ -17,12 +17,18 @@
 #' @export
 EC50 <- function(KdOT,param=parms){ #
   param['KdOT'] <- KdOT
-  Otseq <- 10^seq(-3,3,length=50)
+  Otseq <- 10^seq(-3,3,length=20)
   Trelseq <- Trel(Otseq,param=param)
-  parms  <- coefficients(drm(Trelseq~Otseq,fct=LL.5()))
-  out <- exp((parms[1]*log(parms[4])+
-                log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])
-                    -1))/parms[1]) 
+  
+  fit <- drm(Trelseq~Otseq,fct=LL.4(fixed=c(NA,NA,100,NA)), control = drmc(constr=T,rmNA=T ),
+      lowerl = c(-Inf,0,0),upperl = c(Inf,99,Inf))
+  
+  parms  <- coefficients(fit) # drm(Trelseq~Otseq,fct=LL.5())
+#   out <- exp((parms[1]*log(parms[4])+
+#                 log(exp(log((2*(-parms[3]+parms[2]))/(parms[2]-1))/parms[5])
+#                     -1))/parms[1]) 
+#   
+  out <- summary(fit)[[3]]['e:(Intercept)',1]
   names(out) <- 'EC50'
   out
 }
