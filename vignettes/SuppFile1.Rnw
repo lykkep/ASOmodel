@@ -96,7 +96,7 @@ plot.doseresponse('vprod',c(0.01,1,2),
   expression(v[prod]),unit=~'nM/min')
 #### Changing kd
 plot.doseresponse('kdegrad',c(1,1/5,1/10,1/50),
-  expression(k[T %->% Ø]),unit=~min^-1)
+  expression(k[T %->% symbol("\306")]),unit=~min^-1)
 #### Changing D1
 plot.doseresponse('KdOT',c(0.01,10,50),expression(K[dOT]== over(k[OT %->% O+T],k[O+T %->% OT])),unit=~'nM')
 #### Changing k1
