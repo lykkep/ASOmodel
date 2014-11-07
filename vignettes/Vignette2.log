@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  7 NOV 2014 10:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  7 NOV 2014 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,9 +221,9 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 44.
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 ! Undefined control sequence.
-<argument> > #install_github('
-                              ASOmodel',username='lykkep')
-l.46 ...stall_github('ASOmodel',username='lykkep')
+<argument> > install_github('
+                             ASOmodel',username='lykkep',build=FALSE)
+l.46 ...('ASOmodel',username='lykkep',build=FALSE)
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -232,9 +232,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> > #install_github('ASOmodel'
-                                       ,username='lykkep')
-l.46 ...stall_github('ASOmodel',username='lykkep')
+<argument> > install_github('ASOmodel'
+                                      ,username='lykkep',build=FALSE)
+l.46 ...('ASOmodel',username='lykkep',build=FALSE)
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -243,9 +243,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> > #install_github('ASOmodel',username='
-                                                  lykkep')
-l.46 ...stall_github('ASOmodel',username='lykkep')
+<argument> > install_github('ASOmodel',username='
+                                                 lykkep',build=FALSE)
+l.46 ...('ASOmodel',username='lykkep',build=FALSE)
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -255,8 +255,8 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 <argument> ..._github('ASOmodel',username='lykkep'
-                                                  )
-l.46 ...stall_github('ASOmodel',username='lykkep')
+                                                  ,build=FALSE)
+l.46 ...('ASOmodel',username='lykkep',build=FALSE)
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3314,7 +3314,7 @@ s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Vignette2.pdf (9 pages, 173464 bytes).
+Output written on Vignette2.pdf (9 pages, 173472 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
