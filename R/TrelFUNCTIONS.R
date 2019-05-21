@@ -121,6 +121,8 @@ TrelNO <- function(Ot,param=parmsNO){
 #' @param Ot The total oligonucleotide concentration
 #' @param kOT The dissociation rate between the oligonucleotide and the target
 #' 
+#' @importFrom GillespieSSA ssa
+#' 
 #' @return returns timeseries for the stochatic simluation ($data) and a vector ($Tstat) with the inital Ot, the mean of Trel and the standard deviation of Trel after the system has reached steady-state.
 #' @examples 
 #' parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  kdegrad = 0.04,      

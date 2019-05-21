@@ -20,3 +20,4 @@ Collate:
     'IC50FUNCTIONS.R'
     'MiscFUNCTIONS.R'
     'TrelFUNCTIONS.R'
+RoxygenNote: 6.1.1

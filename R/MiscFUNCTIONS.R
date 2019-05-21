@@ -40,7 +40,7 @@ diffASO <- function(t,y, param){
 ###############################################################################
 #TODO: document
 #' @export
-plot.doseresponse <- function(par,list.par,title,unit,plot=T){
+plot_doseresponse <- function(par,list.par,title,unit,plot=T){
   if(plot){
   curve(Trel,1E-2,1E4,log='x', 
         xlab=expression(Total~oligo~concentration~'(nM)'),

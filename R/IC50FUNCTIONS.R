@@ -46,15 +46,12 @@ EC50 <- function(KdOT,param=parms){ #
 #' 
 #' @return returns the EC50 value
 #' @examples 
-#' parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  kdegrad = 0.04,  	  
-#' kcleav = 2, kOT =0.06, kOTE=2, kC = 0.1)
+#' parms1 <- c(kOpT = 2E-5,kOTpE =50E-5 ,vprod = 150,  kdegrad = 0.04, kcleav = 2, kOT =0.06, kOTE=2, kC = 0.1)
 #' #Initital state vector
-#' x0 <- c(Tt=parms1["vprod"]/parms1["kdegrad"],
-#'              OT=0,OTE=0,E=1e3,O=1e5,OCE=0,OC=0)
+#' x0 <- c(Tt=parms1['vprod']/parms1['kdegrad'],OT=0,OTE=0,E=1e3,O=1e5,OCE=0,OC=0)
 #' names(x0) <- c('Tt','OT','OTE','E','O','OCE','OC')
 #' #Propensity vector
-#' a <-  c("vprod","kOpT*O*Tt","kdegrad*Tt","kOT*OT","kOTE*OTE","kdegrad*OT",
-#'          "kOTpE*OT*E","kdegrad*OTE","kcleav*OTE","kC*OC","kOTE*OCE" )
+#' a <-  c("vprod",'kOpT*O*Tt',"kdegrad*Tt","kOT*OT","kOTE*OTE","kdegrad*OT","kOTpE*OT*E","kdegrad*OTE","kcleav*OTE","kC*OC","kOTE*OCE" )
 #' #State-change matrix
 #' nu <- matrix(0,7,length(a))
 #' dimnames(nu) <- list(names(x0),a)
@@ -74,7 +71,7 @@ EC50 <- function(KdOT,param=parms){ #
 #' nu['OC',c('kC*OC')] <- -1
 #' 
 #' Otseq <- 10^seq(2.5,6,by=0.2)
-#' Trelseq <-sapply(Otseq,function(i) Trelstoc(i)$Tstat)})
+#' Trelseq <-sapply(Otseq,function(i) Trelstoc(i)$Tstat[2])
 #' EC50STOC <- EC50stoc(Trelseq, Otseq)
 #' @export
 EC50stoc <- function(Trel,Ot){ #
